@@ -94,7 +94,8 @@ get_header();
 						$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
 						$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
 
-						$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
+						$theTitle = get_the_title(); 
+						//$theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
 
 						$post_price = get_post_meta($post->ID, 'post_price', true);
 
@@ -362,7 +363,7 @@ get_header();
 						        <div class="control-group form-type-select form-item-ad-location form-item">
 									<div class="controls"> 
 										<select id="edit-ad-location" name="post_location" class="form-select" style="display: none;">
-											<option value="All" selected="selected"><?php _e( 'Location...', 'agrg' ); ?></option>
+											<option value="All" selected="selected"><?php _e( 'Местоположение...', 'agrg' ); ?></option>
 
 											<?php
 
@@ -571,7 +572,8 @@ get_header();
 								
 								
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php $theTitle = get_the_title();  echo $theTitle; ?></a>
 								</div>
 								
 							</div>	
@@ -774,7 +776,8 @@ get_header();
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php $theTitle = get_the_title();  echo $theTitle; ?></a>
 								</div>
 							</div>
 

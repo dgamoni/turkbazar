@@ -75,27 +75,28 @@ $layout = $redux_demo['layout-version'];
 						$new_post = $redux_demo['new_post'];
 
 					?>
-					<li class="first">
+<!-- 					<li class="first">
 						<a href="<?php echo $new_post; ?>" class="ctools-use-modal ctools-modal-ctools-ajax-register-style"><?php printf( __( 'Разместить объявление', 'heman' )); ?></a>
+					</li> -->
+					
+					<li class="first1">
+						<a href="<?php echo $profile; ?>" class="myButton1 ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Login"><?php printf( __( 'Мой профиль', 'heman' )); ?></a>
 					</li>
 					
-					<li class="first">
-						<a href="<?php echo $profile; ?>" class="ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Login"><?php printf( __( 'Мой аккаунт', 'heman' )); ?></a>
-					</li>
-					
-					<li class="last">
-						<a href="<?php echo wp_logout_url(get_option('siteurl')); ?>" class="ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Logout"><?php printf( __( 'Выйти', 'heman' )); ?></a>
+					<li class="last1">
+						<a href="<?php echo wp_logout_url(get_option('siteurl')); ?>" class="myButton1 ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Logout"><?php printf( __( 'Выйти', 'heman' )); ?></a>
 					</li>
 					<?php } else { 
 
 						$login = $redux_demo['login'];
 						$register = $redux_demo['register'];
+						$new_post = $register;
 					?>
-					<li class="first">
-						<a href="<?php echo $register; ?>" class="ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Register"><?php printf( __( 'Регистрация', 'heman' )); ?></a>
+					<li class="first1">
+						<a href="<?php echo $register; ?>" class="myButton1 ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Register"><?php printf( __( 'Регистрация', 'heman' )); ?></a>
 					</li>
-					<li class="last login">
-						<a href="<?php echo $login; ?>" class="ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Login"><?php printf( __( 'Войти', 'heman' )); ?></a>
+					<li class="last1 login1">
+						<a href="<?php echo $login; ?>" class="myButton1 ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Login"><?php printf( __( 'Войти', 'heman' )); ?></a>
 					</li>
 				<?php } ?>
 				</ul>  
@@ -110,10 +111,10 @@ $layout = $redux_demo['layout-version'];
 			?>
 			<div class="top-call">
 				<?php echo $top_phone_icon; ?>
-				<span class="call-head"><?php _e( 'Телефон | WhatsApp | Viber', 'agrg' ); ?> :</span>
+				<span class="call-head"><?php _e( 'WhatsApp | Viber', 'agrg' ); ?> :</span>
 				<span class="call-number"><?php echo $top_phone; ?> </span>
 				<?php echo $top_mail_icon; ?>
-				<span class="call-head"><?php _e( 'Адрес почты', 'agrg' ); ?>:</span>
+				<span class="call-head"><?php _e( '', 'agrg' ); ?></span>
 				<span class="call-number top-email"><?php echo $top_mail; ?> </span>
 			</div>
 
@@ -137,6 +138,14 @@ $layout = $redux_demo['layout-version'];
 
 			<div id="version-two-menu" class="main_menu">
 				<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'false')); ?>
+			</div>
+
+			<div id="obyavlenie">
+			<ul>
+				<li>
+					<a href="<?php echo $new_post;  ?>" class=" myButton ctools-use-modal ctools-modal-ctools-ajax-register-style"><?php printf( __( 'Разместить объявление', 'heman' )); ?></a>
+				</li>
+			</ul>					
 			</div>
 
 			

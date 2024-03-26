@@ -4,6 +4,7 @@
 	height: 250px;
 	line-height: 250px;
 	overflow: hidden;
+    display: none;
 	}
 .frame ul {
 	list-style: none;

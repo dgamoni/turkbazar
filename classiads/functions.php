@@ -693,6 +693,8 @@ function wpcrown_google_analityc_code() { ?>
  * @return void
  */
 function classiads_scripts_styles() {
+  wp_enqueue_script( 'classiads-script', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array( 'jquery' ) );
+  wp_enqueue_style( 'classiads-ie', get_template_directory_uri() . '/css/magnific-popup.css', array( 'classiads-style' ), '2013-11-08' );
 	// Adds JavaScript to pages with the comment form to support sites with
 	// threaded comments (when in use).
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
@@ -704,6 +706,7 @@ function classiads_scripts_styles() {
 
 	// Loads JavaScript file with functionality specific to classiads.
 	wp_enqueue_script( 'classiads-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-07-18', true );
+  
 
 	// Add Open Sans and Bitter fonts, used in the main stylesheet.
 	wp_enqueue_style( 'classiads-fonts', classiads_fonts_url(), array(), null );
@@ -716,6 +719,7 @@ function classiads_scripts_styles() {
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'classiads-ie', get_template_directory_uri() . '/css/ie.css', array( 'classiads-style' ), '2013-11-08' );
+  
 	wp_style_add_data( 'classiads-ie', 'conditional', 'lt IE 9' );
 
 
@@ -772,10 +776,10 @@ function classiads_scripts_styles() {
         wp_enqueue_script( 'classiads-flexslider-script', get_template_directory_uri() . '/js/jquery.flexslider.js', array( 'jquery' ), '2014-07-18', true );
 
         // Load gallery
-        wp_enqueue_script( 'classiads-gallery-script', get_template_directory_uri() . '/js/galleria-1.3.5.min.js', array( 'jquery' ), '2014-07-18', true );
+        //wp_enqueue_script( 'classiads-gallery-script', get_template_directory_uri() . '/js/galleria-1.4.2.min.js', array( 'jquery' ), '2014-07-18', true );
 
         // Load gallery
-        wp_enqueue_script( 'classiads-gallery-theme-script', get_template_directory_uri() . '/js/galleria.classic.min.js', array( 'jquery' ), '2014-07-18', true );
+        //wp_enqueue_script( 'classiads-gallery-theme-script', get_template_directory_uri() . '/js/galleria.classic.min.js', array( 'jquery' ), '2014-07-18', true );
 	}
 
      // Load custom script

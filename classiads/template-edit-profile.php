@@ -70,7 +70,7 @@ $your_image_url = $wpdb->escape($_POST['your_author_image_url']);
 
 			}
 
-			else { $message = "<div id='error'>Please enter a valid email id.</div>"; }
+			else { $message = "<div id='error'>Пожалуйста введите правильный почтовый ящик.</div>"; }
 
 		}
 
@@ -78,7 +78,7 @@ $your_image_url = $wpdb->escape($_POST['your_author_image_url']);
 
 			if (strlen($password) < 5 || strlen($password) > 15) {
 
-				$message = "<div id='error'>Password must be 5 to 15 characters in length.</div>";
+				$message = "<div id='error'>Пароль не должен быть меньше 5 и больше 15 символов.</div>";
 
 				}
 
@@ -86,13 +86,13 @@ $your_image_url = $wpdb->escape($_POST['your_author_image_url']);
 
 			elseif(isset($password) && $password != $confirm_password) {
 
-				$message = "<div class='error'>Password Mismatch</div>";
+				$message = "<div class='error'>Пароль не соответствует.</div>";
 
 			} elseif ( isset($password) && !empty($password) ) {
 
 				$update = wp_set_password( $password, $user_ID );
 
-				$message = "<div id='success'>Your profile updated successfully.</div>";
+				$message = "<div id='success'>Данные Вашего аккаунта успешно обновлены!.</div>";
 
 			}
 
@@ -120,7 +120,7 @@ get_header(); ?>
 	    	<div class="span8 first">
 			
 				<div class="account-overview clearfix">
-					<h3 style="margin-top: 7px;"><?php _e('ACCOUNT OVERVIEW', 'agrg') ?></h3>
+					<h3 style="margin-top: 7px;"><?php _e('ПРОСМОТР АККАУНТА', 'agrg') ?></h3>
 					<div class="h3-seprator"></div>
 					<div class="span3 first author-avatar-edit-post">
 						<?php $profile = $redux_demo['profile']; ?>
@@ -150,10 +150,10 @@ get_header(); ?>
 								
 								
 								<span class="delete-image-btn"><a href="#" class="delete-author-image"><i class="fa fa-times"></i></a></span>
-						<span class="author-profile-ad-details"><a href="#" class="button-ag large green upload-author-image"><span class="button-inner"><?php _e('Add New Image', 'agrg') ?></span></a></span>
+						<span class="author-profile-ad-details"><a href="#" class="button-ag large green upload-author-image"><span class="button-inner"><?php _e('Добавить фото', 'agrg') ?></span></a></span>
 					</div>
 					<div class="span4">					
-							<span class="ad-detail-info"><?php _e( 'Regular Ads', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'Регулярные объявления', 'agrg' ); ?>
 							<span class="ad-detail"><?php echo $user_post_count = count_user_posts( $user_ID ); ?></span>
 						</span>
 
@@ -206,7 +206,7 @@ get_header(); ?>
 							<?php endwhile; ?>
 							<?php $wp_query = null; $wp_query = $temp;?>
 
-							<span class="ad-detail-info"><?php _e( 'Featured Ads', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'VIP-объявление', 'agrg' ); ?>
 								<span class="ad-detail"><?php echo $FeaturedAdsCount ?></span>
 							</span>
 						 <?php
@@ -238,7 +238,7 @@ get_header(); ?>
 
 																?>
 
-															<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+															<span class="ad-detail-info"><?php _e( 'VIP-объявлений осталось', 'agrg' ); ?>
 																<span class="ad-detail"><?php  echo $availableADS; ?></span>
 															</span>
 
@@ -246,7 +246,7 @@ get_header(); ?>
 													}else{
 														if($featuredADS == 0){
 														?>
-														<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+														<span class="ad-detail-info"><?php _e( 'VIP-объявлений осталось', 'agrg' ); ?>
 														<span class="ad-detail">0</span>
 														</span>
 														<?php
@@ -256,7 +256,7 @@ get_header(); ?>
 												}
 											}else{
 										?>
-										<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+										<span class="ad-detail-info"><?php _e( 'VIP-объявлений осталось', 'agrg' ); ?>
 										<span class="ad-detail">0</span>
 										</span>
 										<?php } ?>
@@ -287,40 +287,40 @@ get_header(); ?>
 								<input class="criteria-image-url" id="your_image_url" type="text" size="36" name="your_author_image_url" style="display: none;" value="your_author_image_url" />
 						        <input class="criteria-image-id" id="your_image_id" type="text" size="36" name="your_author_image_id" style="display: none;" value="your_author_image_id" />
 							
-								<input type="text" id="contactName" placeholder="First Name" name="first_name" class="text input-textarea half" value="<?php echo $user_info->first_name; ?>" />
+								<input type="text" id="contactName" placeholder="Имя" name="first_name" class="text input-textarea half" value="<?php echo $user_info->first_name; ?>" />
 
 							
 
 				
-								<input type="text" id="contactName" placeholder="Last Name" name="last_name" class="text last input-textarea half" value="<?php echo $user_info->last_name; ?>"/> 
+								<input type="text" id="contactName" placeholder="Фамилия" name="last_name" class="text last input-textarea half" value="<?php echo $user_info->last_name; ?>"/> 
 
 							
 
 							
-								<input type="text" id="email" placeholder="Email" name="email" class="text input-textarea half" value="<?php echo $user_info->user_email; ?>" />
+								<input type="text" id="email" placeholder="Почтовый ящик" name="email" class="text input-textarea half" value="<?php echo $user_info->user_email; ?>" />
 
 							
 
-								<input type="text" id="website" placeholder="WebSite" name="website" class="text last input-textarea half" value="<?php echo $user_info->user_url; ?>"/>
+								<input type="text" id="website" placeholder="Вебсайт" name="website" class="text last input-textarea half" value="<?php echo $user_info->user_url; ?>"/>
 
 							
 
-								<input type="text" id="phone" placeholder="Phone" name="phone" class="text input-textarea half" value="<?php echo $user_info->phone; ?>" /> 
+								<input type="text" id="phone" placeholder="Телефон, WhatsApp или Viber" name="phone" class="text input-textarea half" value="<?php echo $user_info->phone; ?>" /> 
 
 							
 
-								<input type="text" id="address" placeholder="Address" name="address" class="text last input-textarea half" value="<?php echo $user_info->address; ?>" /> 
+								<input type="text" id="address" placeholder="Адрес" name="address" class="text last input-textarea half" value="<?php echo $user_info->address; ?>" /> 
 
 							
 
 
-								<textarea name="desc" id="video" placeholder="Author Bio" class="text" rows="10"><?php echo $user_info->description; ?></textarea>
+								<textarea name="desc" id="video" placeholder="О себе..." class="text" rows="10"><?php echo $user_info->description; ?></textarea>
 
 
 
-								<input type="password" placeholder="Password" id="password" name="pwd" class="text input-textarea half" maxlength="15" />
+								<input type="password" placeholder="Пароль" id="password" name="pwd" class="text input-textarea half" maxlength="15" />
 
-								<input type="password" placeholder="Confirm Password" id="password" name="confirm" class="text last input-textarea half" maxlength="15" />
+								<input type="password" placeholder="Подтвердить пароль" id="password" name="confirm" class="text last input-textarea half" maxlength="15" />
 
 								<p class="help-block"><?php _e('Если вы хотите изменить пароль на новый. В противном случае оставьте поле пустым.', 'agrg') ?></p>
 
@@ -330,7 +330,7 @@ get_header(); ?>
 								<input type="hidden" name="submitted" id="submitted" value="true" />
 								<div class="clearfix"></div>
 								<div class="btn-container">
-									<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Сохранить', 'agrg') ?></button>
+									<button class="btn form-submit" id="edit-submit" name="op" value="Опубликовать объявление." type="submit"><?php _e('Сохранить', 'agrg') ?></button>
 								</div>
 							</div>
 

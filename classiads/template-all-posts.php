@@ -199,13 +199,147 @@ get_header(); ?>
 
 	</section>
 
+
+
 <?php elseif ($page_slider == "Big Map") : ?>
 
-	<section id="big-map">
+<!-- dgamoni add seach -->
+		<div id="advanced-search-widget-version2" class="home-search">
+
+			<div class="container">
+
+				<div class="advanced-search-widget-content">
+
+					<form action="<?php echo home_url(); ?>" method="get" id="views-exposed-form-search-view-other-ads-page" accept-charset="UTF-8">
+						
+						<div id="edit-field-category-wrapper" class="views-exposed-widget views-widget-filter-field_category">
+						    <div class="views-widget">
+						        <div class="control-group form-type-select form-item-field-category form-item">
+									<div class="controls"> 
+										<select id="edit-field-category" name="category_name" class="form-select" style="display: none;">
+													
+											<option value="All" selected="selected"><?php _e( 'Категория...', 'agrg' ); ?></option>
+											<?php
+											$args = array(
+												'hierarchical' => '0',
+												'hide_empty' => '0'
+											);
+											$categories = get_categories($args);
+												foreach ($categories as $cat) {
+													if ($cat->category_parent == 0) { 
+														$catID = $cat->cat_ID;
+													?>
+														<option value="<?php echo $cat->cat_name; ?>"><?php echo $cat->cat_name; ?></option>
+																			
+												<?php 
+													$args2 = array(
+														'hide_empty' => '0',
+														'parent' => $catID
+													);
+													$categories = get_categories($args2);
+													foreach ($categories as $cat) { ?>
+														<option value="<?php echo $cat->slug; ?>">- <?php echo $cat->cat_name; ?></option>
+												<?php } ?>
+
+												<?php } else { ?>
+												<?php }
+											} ?>
+
+										</select>
+									</div>
+								</div>
+						    </div>
+						</div>
+						
+						<div id="edit-ad-location-wrapper" class="views-exposed-widget views-widget-filter-field_ad_location">
+						   	<div class="views-widget">
+						        <div class="control-group form-type-select form-item-ad-location form-item">
+									<div class="controls"> 
+										<select id="edit-ad-location" name="post_location" class="form-select" style="display: none;">
+											<option value="All" selected="selected"><?php _e( 'Местоположение...', 'agrg' ); ?></option>
+
+											<?php
+
+												$args_location = array( 'posts_per_page' => -1 );
+												$lastposts = get_posts( $args_location );
+
+												$all_post_location = array();
+												foreach( $lastposts as $post ) {
+													$all_post_location[] = get_post_meta( $post->ID, 'post_location', true );
+												}
+
+												$directors = array_unique($all_post_location);
+												foreach ($directors as $director) { ?>
+													<option value="<?php echo $director; ?>"><?php echo $director; ?></option>
+												<?php }
+
+											?>
+
+											<?php wp_reset_query(); ?>
+
+										</select>
+									</div>
+								</div>
+						    </div>
+						</div>
+
+						<div class="advanced-search-slider">							
+
+							<div id="advance-search-slider" class="value-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+								<a class="ui-slider-handle ui-state-default ui-corner-all" href="#">
+									<span class="range-pin">
+										<input type="text" name="geo-radius" id="geo-radius" value="100" data-default-value="100">
+									</span>
+								</a>
+							</div>
+							<div class="geo-location-button">
+
+								<div class="geo-location-switch off"><i class="fa fa-location-arrow"></i></div>
+
+							</div>
+
+						</div>
+
+
+						<input type="text" name="geo-location" id="geo-location" value="off" data-default-value="off">
+
+						<input type="text" name="geo-radius-search" id="geo-radius-search" value="500" data-default-value="500">
+
+						<input type="text" name="geo-search-lat" id="geo-search-lat" value="0" data-default-value="0">
+
+						<input type="text" name="geo-search-lng" id="geo-search-lng" value="0" data-default-value="0">
+
+						<div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+					        <div class="views-widget">
+					          	<div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+									<div class="controls"> 
+										<input placeholder="<?php _e( 'Введите слово для поиска...', 'agrg' ); ?>" type="text" id="edit-search-api-views-fulltext" name="s" value="" size="30" maxlength="128" class="form-text">
+										<input type="hidden" id="hidden-keyword" name="s" value="all" size="30" maxlength="128" class="form-text">
+									</div>
+								</div>
+						    </div>
+						</div>
+						
+						<div class="views-exposed-widget views-submit-button">
+						    <button class="btn btn-primary form-submit" id="edit-submit-search-view" name="" value="Search" type="submit"><i class="fa fa-search"></i></button>
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+<!-- dgamoni end add seach -->
+
+<!-- 	<section id="big-map">
+
 
 		<div id="classiads-main-map"></div>
 
-		<script type="text/javascript">
+
+<script type="text/javascript">
 		var mapDiv,
 			map,
 			infobox;
@@ -246,7 +380,8 @@ get_header(); ?>
 						$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
 						$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
 
-						$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
+						$theTitle = get_the_title(); 
+						//$theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
 
 						$post_price = get_post_meta($post->ID, 'post_price', true);
 
@@ -450,6 +585,9 @@ get_header(); ?>
 		});
 		</script>
 
+
+
+
 		<?php 
 
 			global $redux_demo; 
@@ -457,6 +595,7 @@ get_header(); ?>
 			$header_version = $redux_demo['header-version'];
 
 		?>
+
 
 		<?php if($header_version == 2) { ?>
 
@@ -592,7 +731,7 @@ get_header(); ?>
 
 		<?php } ?>
 
-	</section>
+	</section> -->
 
 <?php endif; ?>
 <?php if($page_slider  != "Big Map" && $page_slider != "LayerSlider") { ?>
@@ -847,7 +986,8 @@ get_header(); ?>
 								
 								
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php $theTitle = get_the_title();  echo $theTitle; ?></a>
 								</div>
 								
 							</div>	
@@ -945,8 +1085,8 @@ get_header(); ?>
 		       
         <div class="container">
 			
-				<ul class="tabs quicktabs-tabs quicktabs-style-nostyle clearfix">
-				<div class="three-tabs">
+				<ul id="inline_three-tabs" class="tabs quicktabs-tabs quicktabs-style-nostyle clearfix">
+				<!-- <div class="three-tabs"> -->
 					<li >
 						<a class="current" href="#"><?php _e( 'Последние Объявления', 'agrg' ); ?></a>
 					</li>
@@ -956,7 +1096,7 @@ get_header(); ?>
 					<li>
 						<a class="" href="#"><?php _e( 'Случайные Объявления', 'agrg' ); ?></a>
 					</li>
-					</div>
+					<!-- </div> -->
 				</ul>
 			
 			<div class="pane latest-ads-holder">
@@ -1059,7 +1199,7 @@ get_header(); ?>
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title();  echo $theTitle; ?></a>
 								</div>
 							</div>
 
@@ -1174,7 +1314,7 @@ get_header(); ?>
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title();  echo $theTitle; ?></a>
 								</div>
 							</div>
 
@@ -1293,7 +1433,7 @@ get_header(); ?>
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title();  echo $theTitle; ?></a>
 								</div>
 							</div>
 						</div>

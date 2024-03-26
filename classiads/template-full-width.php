@@ -197,6 +197,8 @@ get_header(); ?>
 
 	</section>
 
+
+
 <?php elseif ($page_slider == "Big Map") : ?>
 
 	<section id="big-map">
@@ -229,6 +231,7 @@ get_header(); ?>
 					values: [
 
 					<?php
+
 
 						$wp_query= null;
 

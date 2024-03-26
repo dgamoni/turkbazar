@@ -146,7 +146,7 @@ if(isset($_POST['submitted'])) {
 						<span class="author-profile-ad-details"><a href="" class="button-ag large green"><span class="button-inner"><?php echo get_the_author_meta('display_name', $user_ID ); ?></span></a></span>
 					</div>
 					<div class="span4">					
-							<span class="ad-detail-info"><?php _e( 'Regular Ads', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'Регулярные объявления', 'agrg' ); ?>
 							<span class="ad-detail"><?php echo $user_post_count = count_user_posts( $user_ID ); ?></span>
 						</span>
 
@@ -199,7 +199,7 @@ if(isset($_POST['submitted'])) {
 							<?php endwhile; ?>
 							<?php $wp_query = null; $wp_query = $temp;?>
 
-							<span class="ad-detail-info"><?php _e( 'Featured Ads', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'VIP-объявление', 'agrg' ); ?>
 								<span class="ad-detail"><?php echo $FeaturedAdsCount ?></span>
 							</span>
 						 <?php
@@ -215,7 +215,7 @@ if(isset($_POST['submitted'])) {
 
 						?>
 
-						<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+						<span class="ad-detail-info"><?php _e( 'VIP-объявление осталось', 'agrg' ); ?>
 							<span class="ad-detail"><?php if($unlimited_ads = "yes") { ?> ∞ <?php } else { echo $allads; } ?></span>
 						</span>
 

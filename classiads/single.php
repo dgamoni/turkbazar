@@ -159,15 +159,19 @@ if(isset($_POST['submitted'])) {
 				<?php
 				}
 				?>
-				<div class="single-slider">
-					<div class="frame" id="basic">
-						<ul class="clearfix">
+
+				<div  class="single-slider">
+					<div class="frame " id="basic">
+						<ul class=" clearfix">
 							<?php require_once(TEMPLATEPATH . '/inc/BFI_Thumb.php'); ?>
 
 								<?php 
 
-								$params = array( 'width' => 770, 'height' => 500, 'crop' => true );
-								$params_small = array( 'width' => 100, 'height' => 70, 'crop' => true );
+								// $params = array( 'width' => 770, 'height' => 500, 'crop' => true );
+								// $params_small = array( 'width' => 100, 'height' => 70, 'crop' => true );
+								//$params = array( 'width' => 770, 'height' => 500 );
+								$params = array( 'height' => 470 );
+								$params_small = array( 'width' => 100, 'height' => 70 );
 
 													
 
@@ -175,7 +179,9 @@ if(isset($_POST['submitted'])) {
 
 									$full_img_url = wp_get_attachment_url($attachment->ID);
 
-									echo "<li><img src='" . bfi_thumb( $full_img_url, $params ) . "', data-big='" . $full_img_url . "'' ></li>";
+									echo "<li><a rel='lightbox' href='".$full_img_url."'> <img src='" . bfi_thumb( $full_img_url, $params ) . "', data-big='" . $full_img_url . "'' > </a></li>";
+									//echo "<li><img src='" . bfi_thumb( $full_img_url, $params ) . "'   ></li>";
+									//echo "<li><a href='".$full_img_url."' class='thickbox'><img src='" . bfi_thumb( $full_img_url, $params ) . "', data-big='" . $full_img_url . "'' ></li>";
 									
 
 								} 
@@ -189,9 +195,17 @@ if(isset($_POST['submitted'])) {
 							<?php echo $post_price; ?>
 						</div>
 						<?php } ?>
+
+
+			<div class="controls1 center">
+				<button class="btn prev"><i class="icon-chevron-left"></i></button>
+				<button class="btn next"><i class="icon-chevron-right"></i></button>
+			</div>
+
 				</div>
-					 <ul class="pages"></ul>
+					 <!-- <ul class="pages"></ul> -->
 					<div class="clearfix"></div>
+
 				</div>
 	    		<?php 
 
@@ -370,7 +384,8 @@ if(isset($_POST['submitted'])) {
 									$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
 									$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
 
-									$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
+									$theTitle = get_the_title(); 
+									//$theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
 
 									$post_price = get_post_meta($post->ID, 'post_price', true);
 
@@ -895,7 +910,10 @@ if(isset($_POST['submitted'])) {
 								
 								
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?>
+									<?php $theTitle = get_the_title();  echo $theTitle; ?>
+									</a>
 								</div>
 								
 							</div>	

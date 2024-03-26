@@ -65,7 +65,7 @@ get_header();
         		<div class="span8 first">
 
 				<div class="account-overview clearfix">
-					<h3 style="margin-top: 7px;"><?php _e('ACCOUNT OVERVIEW', 'agrg') ?></h3>
+					<h3 style="margin-top: 7px;"><?php _e('ПРОСМОТР АККАУНТА', 'agrg') ?></h3>
 					<div class="h3-seprator"></div>
 					<div class="span3 first author-avatar-edit-post">
 						<?php $profile = $redux_demo['profile']; ?>
@@ -88,7 +88,7 @@ get_header();
 								<img class="author-avatar" src="<?php echo $avatar_url; ?>" alt="" />
 
 							<?php } ?>
-						<span class="author-profile-ad-details"><a href="<?php echo $edit; ?>" class="button-ag large green"><span class="button-inner"><?php printf( __( 'Edit Profile', 'agrg' )); ?></span></a></span>
+						<span class="author-profile-ad-details"><a href="<?php echo $edit; ?>" class="button-ag large green"><span class="button-inner"><?php printf( __( 'Редактировать Профиль', 'agrg' )); ?></span></a></span>
 					</div>
 					<div class="span4">					
 							<span class="ad-detail-info"><?php _e( 'Регулярные объявления', 'agrg' ); ?>
@@ -144,7 +144,7 @@ get_header();
 							<?php endwhile; ?>
 							<?php $wp_query = null; $wp_query = $temp;?>
 
-							<span class="ad-detail-info"><?php _e( 'Featured Ads', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'VIP-объявление', 'agrg' ); ?>
 								<span class="ad-detail"><?php echo $FeaturedAdsCount ?></span>
 							</span>
 						 <?php
@@ -176,7 +176,7 @@ get_header();
 
 																?>
 
-															<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+															<span class="ad-detail-info"><?php _e( 'VIP-объявления осталось', 'agrg' ); ?>
 																<span class="ad-detail"><?php  echo $availableADS; ?></span>
 															</span>
 
@@ -184,7 +184,7 @@ get_header();
 													}else{
 														if($featuredADS == 0){
 														?>
-														<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+														<span class="ad-detail-info"><?php _e( 'VIP-объявления осталось', 'agrg' ); ?>
 														<span class="ad-detail">0</span>
 														</span>
 														<?php
@@ -194,7 +194,7 @@ get_header();
 												}
 											}else{
 										?>
-										<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+										<span class="ad-detail-info"><?php _e( 'VIP-объявления осталось', 'agrg' ); ?>
 										<span class="ad-detail">0</span>
 										</span>
 										<?php } ?>
@@ -207,14 +207,14 @@ get_header();
 				</div>
 
 		        	<div class="span8">
-						<h3><?php _e( 'PROFILE', 'agrg' ); ?></h3>
+						<h3><?php _e( 'ПРОФИЛЬ', 'agrg' ); ?></h3>
 							<div class="h3-seprator"></div>
 		        		
 						<div class="full profile-content">							
 							<div class="span4">
-								<span class="author-details"><i class="fa fa-phone"></i><?php _e( 'Телефон:', 'agrg' ); ?> <?php the_author_meta('phone', $user_id); ?></span>
+								<span class="author-details"><i class="fa fa-phone"></i><?php _e( 'Телефон, WhatsApp, Viber:', 'agrg' ); ?> <?php the_author_meta('phone', $user_id); ?></span>
 
-								<span class="author-details"><i class="fa fa-envelope"></i><?php _e( 'Почтовый адрес:', 'agrg' ); ?> <a href="mailto:<?php echo get_the_author_meta('user_email', $$user_id); ?>"><?php echo get_the_author_meta('user_email', $user_id); ?></a></span>
+								<span class="author-details"><i class="fa fa-envelope"></i><?php _e( 'Почтовый ящик:', 'agrg' ); ?> <a href="mailto:<?php echo get_the_author_meta('user_email', $$user_id); ?>"><?php echo get_the_author_meta('user_email', $user_id); ?></a></span>
 
 								<span class="author-details"><i class="fa fa-globe"></i><?php _e( 'Вебсайт:', 'agrg' ); ?> <a href="<?php the_author_meta('user_url', $user_id); ?>"><?php the_author_meta('user_url', $user_id); ?></a></span>
 
@@ -280,7 +280,9 @@ get_header();
 								?>
 							</div>
 							<div class="my-ad-details">
-								<a target="_blank" class="my-ad-title" href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+								<a target="_blank" class="my-ad-title" href="<?php the_permalink(); ?>">
+								<?php $theTitle = get_the_title();  echo $theTitle; ?>
+								</a>
 								<span><i class="fa fa-check-square-o"></i> <?php echo get_post_status( $post->ID ); ?></span>
 								<span><i class="fa fa-eye "></i> <?php echo wpb_get_post_views($post->ID); ?></span>
 								<?php 
@@ -301,9 +303,9 @@ get_header();
 								?>
 								
 								<div class="delete-popup" id="examplePopup<?php echo $post->ID; ?>" style="display:none">
-									<h4><?php _e( 'Вы уверены что хотите удалить?', 'agrg' ); ?></h4>
+									<h4><?php _e( 'Точно удаляем? :)', 'agrg' ); ?></h4>
 									<a class="button-ag large green" href="<?php echo $del_post; ?>">
-									<span class="button-inner"><?php _e( 'Подтвердить', 'agrg' ); ?></span>
+									<span class="button-inner"><?php _e( 'Ага!!', 'agrg' ); ?></span>
 									</a>
 								</div>
 								<?php

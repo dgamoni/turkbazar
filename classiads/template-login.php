@@ -151,18 +151,18 @@ get_header(); ?>
 							include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 							// check for plugin using plugin name
-							if ( is_plugin_active( "nextend-twitter-connect/nextend-twitter-connect.php" ) ) {
+							//if ( is_plugin_active( "nextend-twitter-connect/nextend-twitter-connect.php" ) ) {
 							  //plugin is activated
 							
 							?>
 
 							
 								<div class="social-btn-container">
-									<a class="register-social-button-twitter" href="<?php echo get_site_url(); ?>/wp-login.php?loginTwitter=1" onclick="window.location = '<?php echo get_site_url(); ?>/wp-login.php?loginTwitter=1&redirect='+window.location.href; return false;"><?php _e('Войти с помощью Twitter', 'agrg') ?></a>
+									<a class="register-social-button-twitter" href="<?php echo get_site_url(); ?>/wp-login.php?loginTwitter=1" onclick="window.location = '<?php echo get_site_url(); ?>/wp-login.php?action=wordpress_social_authenticate&mode=login&provider=Twitter&redirect_to='+window.location.href; return false;"><?php _e('Войти с помощью Twitter', 'agrg') ?></a>
 								</div>
 							
 
-							<?php } ?>
+							<?php //} ?>
 
 							<?php
 							/**
@@ -171,18 +171,18 @@ get_header(); ?>
 							include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 							// check for plugin using plugin name
-							if ( is_plugin_active( "nextend-google-connect/nextend-google-connect.php" ) ) {
+							//if ( is_plugin_active( "nextend-google-connect/nextend-google-connect.php" ) ) {
 							  //plugin is activated
 							
 							?>
 
 							
 								<div class="social-btn-container">
-									<a class="register-social-button-google" href="<?php echo get_site_url(); ?>/wp-login.php?loginGoogle=1" onclick="window.location = '<?php echo get_site_url(); ?>/wp-login.php?loginGoogle=1&redirect='+window.location.href; return false;"><?php _e('Войти с помощью Google', 'agrg') ?></a>
+									<a class="register-social-button-google" href="<?php echo get_site_url(); ?>/wp-login.php?loginGoogle=1" onclick="window.location = '<?php echo get_site_url(); ?>/wp-login.php?action=wordpress_social_authenticate&mode=login&provider=Google&redirect='+window.location.href; return false;"><?php _e('Войти с помощью Google', 'agrg') ?></a>
 								</div>
 							
 
-							<?php } ?>
+							<?php //} ?>
 							
 						</div>
 						

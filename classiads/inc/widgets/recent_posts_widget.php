@@ -118,7 +118,10 @@ class TWRecentPostWidget extends WP_Widget {
 
 			    				</div>
 								<div class="post-title">
-									<a href="<?php esc_url(the_permalink()); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php esc_url(the_permalink()); ?>">
+                                    <?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?>
+                                    <?php $theTitle = get_the_title();  echo $theTitle; ?>
+                                    </a>
 								</div>
 						
 						</div>
@@ -149,7 +152,9 @@ class TWRecentPostWidget extends WP_Widget {
 
 					<span class="widget-ad-list-content">
 
-					<span class="widget-ad-list-content-title"><a href="<?php the_permalink(); ?>"><?php the_titlesmall('', '...', true, '20') ?></a></span>
+					<span class="widget-ad-list-content-title"><a href="<?php the_permalink(); ?>">
+                    <?php //the_titlesmall('', '...', true, '20'); 
+                    echo $post->post_title; ?> </a></span>
 
 					<?php $post_price = get_post_meta($post->ID, 'post_price', true); ?>
 					<p class="add-price"><?php echo $post_price; ?></p>

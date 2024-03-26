@@ -292,7 +292,8 @@ get_header(); ?>
 						$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
 						$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
 
-						$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
+						$theTitle = get_the_title(); 
+						//$theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle;
 
 						$post_price = get_post_meta($post->ID, 'post_price', true);
 
@@ -895,7 +896,10 @@ get_header(); ?>
 								
 								
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?>
+									<?php $theTitle = get_the_title();  echo $theTitle; ?>
+									</a>
 								</div>
 								
 							</div>	
@@ -1031,7 +1035,7 @@ get_header(); ?>
 
 			?>
             
-            <h2 class="main-title"><?php _e( 'AD CATEGORIES', 'agrg' ); ?></h2>
+            <h2 class="main-title"><?php _e( 'ДОБАВЛЕННЫЕ КАТЕГОРИИ', 'agrg' ); ?></h2>
 			<div class="h2-seprator"></div>
 
             <div class="full">
@@ -1048,13 +1052,20 @@ get_header(); ?>
 									
 				//$categories = get_categories('hide_empty=1','number=8');
 				$cat_counter = $redux_demo['home-cat-counter'];
-				$categories = get_terms(
+				$categories8 = get_terms(
 				'category', 
-				array('parent' => 0,'number' => $cat_counter,'order'=> 'ASC')	
+				array(
+					'parent' => 0,
+					'number' => $cat_counter,
+					//'number' => 0,
+					'order'=> 'ASC',
+					'hide_empty'=> 0
+					)	
 				);
 		    		$current = -1;
-					//print_r($categories);		      
-					foreach ($categories as $category) { 
+					//print_r($categories);	
+					//var_dump($categories8);	      
+					foreach ($categories8 as $category) { 
 
 
 
@@ -1119,7 +1130,7 @@ get_header(); ?>
 									'pad_counts' => true );
 
 								$categories2 = get_categories($args2);
-
+								//var_dump($categories2);
 								foreach($categories2 as $category2) { 
 									$currentCat++;
 								}
@@ -1134,17 +1145,19 @@ get_header(); ?>
 									'hierarchical' => 1,
 									'exclude' => '',
 									'include' => '',
-									'number' => '5',
+									'number' => 6,
 									'taxonomy' => 'category',
 									'pad_counts' => true );
 
 								$categories = get_categories($args);
+								//var_dump($categories);
 								foreach($categories as $category) {
 							?>
 
 								<li>
 								  	<a href="<?php echo get_category_link( $category->term_id )?>" title="View posts in <?php echo $category->name?>">
-										<?php $categoryTitle = $category->name; $categoryTitle = (strlen($categoryTitle) > 30) ? substr($categoryTitle,0,27).'...' : $categoryTitle; echo $categoryTitle; ?>
+										<?php //$categoryTitle = $category->name; $categoryTitle = (strlen($categoryTitle) > 30) ? substr($categoryTitle,0,27).'...' : $categoryTitle; echo $categoryTitle; ?>
+										<?php $categoryTitle = $category->name;  echo $categoryTitle; ?>
 									</a>
 								  	<span class="category-counter"><?php echo $category->count ?></span>
 								</li>
@@ -1223,7 +1236,7 @@ get_header(); ?>
 	</div>	
 	<section id="locations">
 	<div class="container">
-		<h2 class="main-title"><?php _e( 'AD LOCATIONS', 'agrg' ); ?></h2>
+		<h2 class="main-title"><?php _e( 'ДОБАВЛЕННЫЕ МЕСТОПОЛОЖЕНИЯ', 'agrg' ); ?></h2>
 			<div class="h2-seprator"></div>
 		<div class="location clearfix">
 		<?php
@@ -1259,13 +1272,13 @@ get_header(); ?>
 	</section>
 
        <section id="ads-homepage">
-		<h2 class="main-title"><?php _e( 'ADVERTISEMENTS', 'agrg' ); ?></h2>
+		<h2 class="main-title"><?php _e( 'РЕКЛАМА', 'agrg' ); ?></h2>
 			<div class="h2-seprator"></div>
 		       
         <div class="container">
 			
-				<ul class="tabs quicktabs-tabs quicktabs-style-nostyle clearfix">
-				<div class="three-tabs">
+				<ul  id="inline_three-tabs" class="tabs quicktabs-tabs quicktabs-style-nostyle clearfix">
+				<!-- <div id="inline_three-tabs" class="three-tabs"> -->
 					<li >
 						<a class="current" href="#"><?php _e( 'Последние Объявления', 'agrg' ); ?></a>
 					</li>
@@ -1275,7 +1288,7 @@ get_header(); ?>
 					<li>
 						<a class="" href="#"><?php _e( 'Случайные Объявления', 'agrg' ); ?></a>
 					</li>
-					</div>
+					<!-- </div> -->
 				</ul>
 			
 			<div class="pane latest-ads-holder">
@@ -1380,7 +1393,10 @@ get_header(); ?>
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?>
+									<?php $theTitle = get_the_title();  echo $theTitle; ?>
+									</a>
 								</div>
 							</div>
 
@@ -1511,7 +1527,10 @@ get_header(); ?>
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?>
+									<?php $theTitle = get_the_title(); echo $theTitle; ?>
+									</a>
 								</div>
 							</div>
 
@@ -1642,7 +1661,10 @@ get_header(); ?>
 								
 				    		
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 22) ? substr($theTitle,0,22).'...' : $theTitle; echo $theTitle; ?>
+									<?php $theTitle = get_the_title();  echo $theTitle; ?>
+									</a>
 								</div>
 							</div>
 						</div>

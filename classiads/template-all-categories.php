@@ -92,7 +92,7 @@ get_header(); ?>
 
 			?>
             
-            <h2 class="main-title"><?php _e( 'AD CATEGORIES', 'agrg' ); ?></h2>
+            <h2 class="main-title"><?php _e( 'КАТЕГОРИЯ ОБЪЯВЛЕНИЯ', 'agrg' ); ?></h2>
 			<div class="h2-seprator"></div>
 
             <div class="full">
@@ -196,7 +196,8 @@ get_header(); ?>
 
 								<li>
 								  	<a href="<?php echo get_category_link( $category->term_id )?>" title="View posts in <?php echo $category->name?>">
-										<?php $categoryTitle = $category->name; $categoryTitle = (strlen($categoryTitle) > 30) ? substr($categoryTitle,0,27).'...' : $categoryTitle; echo $categoryTitle; ?>
+										<?php //$categoryTitle = $category->name; $categoryTitle = (strlen($categoryTitle) > 30) ? substr($categoryTitle,0,27).'...' : $categoryTitle; echo $categoryTitle; ?>
+										<?php $categoryTitle = $category->name;  echo $categoryTitle; ?>
 									</a>
 								  	<span class="category-counter"><?php echo $category->count ?></span>
 								</li>
@@ -348,7 +349,10 @@ get_header(); ?>
 								
 								
 								<div class="post-title">
-									<a href="<?php the_permalink(); ?>"><?php $theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?></a>
+									<a href="<?php the_permalink(); ?>">
+									<?php //$theTitle = get_the_title(); $theTitle = (strlen($theTitle) > 40) ? substr($theTitle,0,37).'...' : $theTitle; echo $theTitle; ?>
+									<?php $theTitle = get_the_title();  echo $theTitle; ?>
+									</a>
 								</div>
 								
 							</div>	

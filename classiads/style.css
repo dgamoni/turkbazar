@@ -18,3 +18,234 @@
 	margin-bottom: 10px;
 	text-align: center;
 }
+
+/* monothemes@gmail.com fix 21-01-15 */
+#inline_three-tabs li a {
+	padding: 5px 25px !important;
+	margin: 13px;
+	border: 1px solid #eee;
+	/*box-shadow: 0 1px 0 0 #f1f1f1;*/
+	/*border-right: 1px !important; */
+}
+#inline_three-tabs li:last-child > a {
+border-right: 1px solid #eee !important;
+}
+#inline_three-tabs li a:hover, #inline_three-tabs li a:active, #inline_three-tabs li .current{
+	background-color: #e96969;
+	color: white !important;
+}
+#obyavlenie {
+	padding-top: 30px;
+	float: right;
+}
+#obyavlenie  ul li {
+	text-decoration: none;
+	line-height: 16px !important;
+	font-size: 16px !important;
+	padding: 45px 8px;
+	/*padding-top: 31px;*/
+	padding-top: 12px;
+	margin-top: 5px;
+	display: block;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+#obyavlenie  ul li a {
+	background-color: #e96969;
+	color: white;
+/*	padding: 25px;
+	font-size: 16px !important;*/
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+	#obyavlenie {
+	padding-top: 3px;
+	}
+}
+
+
+@media (max-width: 767px) {
+	#inline_three-tabs li a{
+	padding: 10px 0px 10px 0px!important;
+	 }
+
+	#obyavlenie {
+		float: none;
+	}
+	#obyavlenie ul li a {
+		width: 91% !important;
+		display: inline-block;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	#obyavlenie, #obyavlenie ul, #obyavlenie ul li {
+		padding:0 !important;
+		margin: 0 !important;
+	}
+	.log-in #edit-profile {
+		padding: 10px 0 0 0 !important;
+	}
+	.log-in #edit-profile .span4.last {
+		padding-left: 0 !important;
+	}
+	#fixmobil23 {
+	
+	}
+	.log-in #edit-profile .span4.last .social-btn{
+		padding-left: 0px !important;
+		width: 87% !important;
+		margin-left: 0;
+	}
+	.log-in #edit-profile .btn-container {
+		width: 79% !important;
+	}
+
+
+}
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('fonts/MyriadProRegular.eot');
+    src: url('fonts/MyriadProRegular.eot') format('embedded-opentype'),
+         url('fonts/MyriadProRegular.woff2') format('woff2'),
+         url('fonts/MyriadProRegular.woff') format('woff'),
+         url('fonts/MyriadProRegular.ttf') format('truetype'),
+         url('fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+.ad-detail-half-box .ad-detail-info, span.ad-page-price, html, body, div, applet, object, iframe p, blockquote, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+font-family: MyriadProRegular !important;
+}
+.fa {
+/*font-family: FontAwesome !important;*/
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 39px 0px -27px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -27px #e67a73;
+	box-shadow:inset 0px 39px 0px -27px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:4px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	padding:9px 39px;
+	text-decoration:none;
+	text-shadow:0px 1px 13px #b23e35;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+#fixmobil23 {
+
+}
+/*.myButton1 {
+	-moz-box-shadow:inset 0px 39px 0px -27px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -27px #e67a73;
+	box-shadow:inset 0px 39px 0px -27px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:4px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff !important;
+	font-family:arial;
+	font-size:15px;
+	
+	padding: 5px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 13px #b23e35;
+}*/
+.myButton1 {
+	-moz-box-shadow: inset 0px 39px 0px -27px #575656;
+	-webkit-box-shadow: inset 0px 39px 0px -27px #575656;
+	box-shadow: inset 0px 39px 0px -27px #575656;
+	background-color: #444444;
+	-moz-border-radius: 17px;
+	-webkit-border-radius: 17px;
+	border-radius: 17px;
+	border: 4px solid #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff !important;
+	font-family: arial;
+	font-size: 15px;
+	/* padding: 9px 39px; */
+	padding: 5px 23px;
+	text-decoration: none;
+	text-shadow: 0px 1px 13px #3C3939;
+}
+
+.myButton1:hover {
+	/*background-color:#eb675e;*/
+	color: white !important;
+}
+.myButton1:active {
+	position:relative;
+	top:1px;
+}
+.log-in #edit-profile .span4.last .social-btn{
+		padding-left: 20px;
+	}
+
+/*dgamoni fix 2*/
+.category-box {
+	height: 290px !important;
+}
+
+.category #inline_three-tabs li a {
+padding: 5px 8px !important;
+}
+.controls1 {
+	position: absolute;
+top: 50%;
+width: 100%;
+}
+.btn.prev {
+	left: 0;
+	position: absolute;
+}
+.btn.next {
+	right: 0;
+	position: absolute;
+}
+.icon-chevron-right:before {
+content: "\f054";
+font-family:"FontAwesome";
+}
+.icon-chevron-left:before {
+content: "\f053";
+font-family:"FontAwesome";
+}
+.frame ul li img {
+width: inherit !important;
+}
+.frame ul li {
+background: #FFFFFF !important;
+}
+
+.page-template-template-homepage-v1 #categories-homepage .view-more-btn{
+	display: block !important;
+	position: inherit;
+}
+.ad-box {
+	background: url('images/image00.jpg');
+	background-size: 62%;
+	background-repeat: no-repeat;
+	background-color: white !important;
+	background-position: 50% 20%;
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Edit Ad
+ * Template name: New Ad Page
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,103 +10,20 @@
  */
 
 if ( !is_user_logged_in() ) {
-								
-	wp_redirect( home_url() ); exit;
+
+	global $redux_demo; 
+	$login = $redux_demo['login'];
+	wp_redirect( $login ); exit;
 								
 } else { 
 
 }
 
-$postContent = '';
-global $current_user;
-		    get_currentuserinfo();
-
-		    $userID = $current_user->ID;
-
-$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' =>'-1') );
-
-if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-	
-	if(isset($_GET['post'])) {
-		
-		if($_GET['post'] == $post->ID)
-		{
-			$author = get_the_author_ID();
-			if($author != $userID) {
-				wp_redirect( home_url() ); exit;
-			}
-			
-			$current_post = $post->ID;
-
-			$title = get_the_title();
-			$content = get_the_content();
-
-			$posttags = get_the_tags($current_post);
-			if ($posttags) {
-			  foreach($posttags as $tag) {
-				$tags_list = $tag->name . ' '; 
-			  }
-			}
-
-			$postcategory = get_the_category( $current_post );
-			$category_id = $postcategory[0]->cat_ID;
-
-			$post_category_type = get_post_meta($post->ID, 'post_category_type', true);
-			$post_price = get_post_meta($post->ID, 'post_price', true);
-			$post_location = get_post_meta($post->ID, 'post_location', true);
-			$post_latitude = get_post_meta($post->ID, 'post_latitude', true);
-			$post_longitude = get_post_meta($post->ID, 'post_longitude', true);
-			$post_price_plan_id = get_post_meta($post->ID, 'post_price_plan_id', true);
-			$post_address = get_post_meta($post->ID, 'post_address', true);
-			$post_video = get_post_meta($post->ID, 'post_video', true);
-
-			$featured_post = "0";
-
-			$post_price_plan_activation_date = get_post_meta($post->ID, 'post_price_plan_activation_date', true);
-			$post_price_plan_expiration_date = get_post_meta($post->ID, 'post_price_plan_expiration_date', true);
-			$todayDate = strtotime(date('d/m/Y H:i:s'));
-			$expireDate = strtotime($post_price_plan_expiration_date);  
-
-			if(!empty($post_price_plan_activation_date)) {
-
-				if(($todayDate < $expireDate) or empty($post_price_plan_expiration_date)) {
-					$featured_post = "1";
-				}
-
-			}
-
-
-
-			if(empty($post_latitude)) {
-				$post_latitude = 0;
-			}
-
-			if(empty($post_longitude)) {
-				$post_longitude = 0;
-				$mapZoom = 2;
-			} else {
-				$mapZoom = 16;
-			}
-			
-			if ( has_post_thumbnail() ) {
-			
-				$post_thumbnail = get_the_post_thumbnail($current_post, 'thumbnail');
-			
-			} 
-			
-		}
-	}
-
-endwhile; endif;
-wp_reset_query();
-
-global $current_post;
-
-
 $postTitleError = '';
 $post_priceError = '';
 $catError = '';
 $featPlanMesage = '';
+$postContent = '';
 
 if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_nonce($_POST['post_nonce_field'], 'post_nonce')) {
 
@@ -115,7 +32,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		$hasError = true;
 	} else {
 		$postTitle = trim($_POST['postTitle']);
-	}
+	} 
 
 	if(trim($_POST['cat']) === '-1') {
 		$catError = 'Please select a category.';
@@ -124,12 +41,12 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 
 
 
-	if($hasError != true) {
-	if(is_super_admin() ){
+	if($hasError != true && !empty($_POST['edit-feature-plan']) || isset($_POST['regular-ads-enable'])) {
+		if(is_super_admin() ){
 			$postStatus = 'publish';
 		}elseif(!is_super_admin()){
 			
-			if($redux_demo['post-options-edit-on'] == 1){
+			if($redux_demo['post-options-on'] == 1){
 				$postStatus = 'private';
 			}else{
 				$postStatus = 'publish';
@@ -137,7 +54,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		}
 	
 		$post_information = array(
-			'ID' => $current_post,
 			'post_title' => esc_attr(strip_tags($_POST['postTitle'])),
 			'post_content' => esc_attr(strip_tags($_POST['postContent'])),
 			'post-type' => 'post',
@@ -151,12 +67,6 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		
 		$post_id = wp_insert_post($post_information);
 
-		$latitude = wp_kses($_POST['latitude'], $allowed);
-		$longitude = wp_kses($_POST['longitude'], $allowed);
-
-		if($latitude == 0) { $latitude = ""; };
-		if($longitude == 0) { $longitude = ""; };
-
 		$post_price_status = trim($_POST['post_price']);
 
 		global $redux_demo; 
@@ -167,14 +77,14 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		} else {
 			$post_price_content = $post_price_status;
 		}
-			$catID = $_POST['cat'].'custom_field';
+		$catID = $_POST['cat'].'custom_field';
 		$custom_fields = $_POST[$catID];
 		update_post_meta($post_id, 'post_category_type', esc_attr( $_POST['post_category_type'] ) );
 		update_post_meta($post_id, 'custom_field', $custom_fields);
 		update_post_meta($post_id, 'post_price', $post_price_content, $allowed);
 		update_post_meta($post_id, 'post_location', wp_kses($_POST['post_location'], $allowed));
-		update_post_meta($post_id, 'post_latitude', $latitude);
-		update_post_meta($post_id, 'post_longitude', $longitude);
+		update_post_meta($post_id, 'post_latitude', wp_kses($_POST['latitude'], $allowed));
+		update_post_meta($post_id, 'post_longitude', wp_kses($_POST['longitude'], $allowed));
 		update_post_meta($post_id, 'post_address', wp_kses($_POST['address'], $allowed));
 		update_post_meta($post_id, 'post_video', $_POST['video'], $allowed);
 
@@ -273,29 +183,30 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 				}
 			}
 		}
-
-		if (isset($_POST['att_remove'])) {
-			foreach ($_POST['att_remove'] as $att_id){
-				wp_delete_attachment($att_id);
-			}
-		}
 		
 		wp_redirect( $permalink ); exit;
 
 	}
+		$featured_plans = $redux_demo['featured_plans'];
+			if(empty($_POST['edit-feature-plan']) && !isset($_POST['regular-ads-enable'])) {
+				if(!empty($featured_plans)) {
+					wp_redirect( $featured_plans ); exit;
+				}
+			}
+
+	
 
 } 
 
-get_header();  ?>
-
-
+get_header(); ?>
 	
 	<?php while ( have_posts() ) : the_post(); ?>
-
+	
 	<div class="ad-title">
 	
         		<h2><?php the_title(); ?></h2> 	
 	</div>
+
 
     <section class="ads-main-page">
 
@@ -382,13 +293,13 @@ get_header();  ?>
 							<?php endwhile; ?>
 							<?php $wp_query = null; $wp_query = $temp;?>
 
-							<span class="ad-detail-info"><?php _e( 'VIP-Объявления', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'Популярные объявления', 'agrg' ); ?>
 								<span class="ad-detail"><?php echo $FeaturedAdsCount ?></span>
 							</span>
 						 <?php
 						// set the meta_key to the appropriate custom field meta key
 
-								global $wpdb;
+							global $wpdb;
 
 										$result = $wpdb->get_results( "SELECT * FROM wpcads_paypal WHERE user_id = " . $current_user->ID." ORDER BY main_id DESC" );
 
@@ -397,7 +308,7 @@ get_header();  ?>
 											    $featuredADS = 0;
 
 											    foreach ( $result as $info ) { 
-								            		if($info->status != "in progress" && $info->status != "pending" && $info->status != "faild") {
+								            		if($info->status != "in progress" && $info->status != "pending" && $info->status != "failed") {
 																	
 																	
 															$featuredADS++;
@@ -414,39 +325,39 @@ get_header();  ?>
 
 																?>
 
-															<span class="ad-detail-info"><?php _e( 'VIP-Объявления осталось', 'agrg' ); ?>
+															<span class="ad-detail-info"><?php _e( 'Осталось популярных объявлений', 'agrg' ); ?>
 																<span class="ad-detail"><?php  echo $availableADS; ?></span>
 															</span>
 
 														<?php 
 													}else{
-														if($featuredADS == 0){
+													if($featuredADS == 0){
 														?>
-														<span class="ad-detail-info"><?php _e( 'VIP-Объявления осталось', 'agrg' ); ?>
+														<span class="ad-detail-info"><?php _e( 'Осталось популярных объявлений', 'agrg' ); ?>
 														<span class="ad-detail">0</span>
 														</span>
 														<?php
 														} 
 														$featuredADS++;
-													}
+													} 
 												}
 											}else{
 										?>
-										<span class="ad-detail-info"><?php _e( 'VIP-Объявления осталось', 'agrg' ); ?>
+										<span class="ad-detail-info"><?php _e( 'Осталось популярных объявлений', 'agrg' ); ?>
 										<span class="ad-detail">0</span>
 										</span>
 										<?php } ?>
 
-					
+										
 						
 						<?php } ?>
 					</div>
 					
 				</div>
-
-
+				
 				<div id="upload-ad" class="ad-detail-content">
-
+					<h3 style="margin-top: 7px;"><?php _e('НОВОЕ ОБЪЯВЛЕНИЕ', 'agrg') ?></h3>
+						<div class="h3-seprator"></div>
 					<form class="form-item" action="" id="primaryPostForm" method="POST" enctype="multipart/form-data">
 
 						<?php if($postTitleError != '') { ?>
@@ -461,20 +372,17 @@ get_header();  ?>
 						<?php } ?>
 
 						
+							
+							<input type="text" id="postTitle" name="postTitle" placeholder="<?php _e('Заголовок объявления', 'agrg') ?>" size="60" maxlength="255" class="form-text required input-textarea half">
 
-							<h2><?php echo $expireDate; ?></h2>
+								<?php wp_dropdown_categories( 'show_option_none=Category&hide_empty=0&hierarchical=1&id=catID' ); ?>
 
-							<input type="text" id="postTitle" placeholder="Post Title" name="postTitle" value="<?php echo $title; ?>" size="60" maxlength="255" class="form-text required input-textarea half">
-
-
-								<?php wp_dropdown_categories( 'show_option_none=Category&hide_empty=0&hierarchical=1&selected='. $category_id .'&taxonomy=category&id=catID' ); $currCatID = $category_id; ?>
-
-							<div class="clearfix"></div>
+							
 
 						<?php
 				        	$args = array(
 				        	  'hide_empty' => false,
-							  'orderby' => count,
+							  'orderby' => 'count',
 							  'order' => 'ASC'
 							);
 
@@ -484,8 +392,6 @@ get_header();  ?>
 							  	foreach($categories as $category) {;
 
 							  	$inum++;
-
-							  	global $user_id;
 
 				          		$user_name = $category->name;
 				          		$user_id = $category->term_id; 
@@ -503,22 +409,18 @@ get_header();  ?>
 								}
 				          	?>
 
-				          	<div id="cat-<?php echo $user_id; ?>" class="wrap-content" <?php if($currCatID == $user_id) { ?>style="display: block;"<?php  } else { ?>style="display: none;"<?php } ?>>
+				          	<div id="cat-<?php echo $user_id; ?>" class="wrap-content" style="display: none;">
 
 				             	<?php 
-
-				             		$wpcrown_custom_fields = get_post_meta($current_post, 'custom_field', true);
-
 				                	for ($i = 0; $i < (count($wpcrown_category_custom_field_option)); $i++) {
-
 				              	?>
 
 				               
 
+									
+									<input type="hidden" class="custom_field" id="custom_field[<?php echo $i; ?>][0]" name="<?php echo $user_id; ?>custom_field[<?php echo $i; ?>][0]" value="<?php echo $wpcrown_category_custom_field_option[$i][0] ?>" size="12">
 
-									<input type="hidden" class="custom_field" id="custom_field[<?php echo $i; ?>][0]" name="<?php echo $user_id; ?>custom_field[<?php echo $i; ?>][0]" value="<?php if($currCatID == $user_id) { echo $wpcrown_custom_fields[$i][0]; } ?>" size="12">
-
-									<input type="text" placeholder="<?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?>" class="custom_field custom_field_visible input-textarea" id="custom_field[<?php echo $i; ?>][1]" name="<?php echo $user_id; ?>custom_field[<?php echo $i; ?>][1]" value="<?php if($currCatID == $user_id) { echo $wpcrown_custom_fields[$i][1]; } ?>" size="12">
+									<input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[<?php echo $i; ?>][1]" name="<?php echo $user_id; ?>custom_field[<?php echo $i; ?>][1]" onfocus="if(this.value=='<?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?>')this.value='';" onblur="if(this.value=='')this.value='<?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?>';" value="<?php if (!empty($wpcrown_category_custom_field_option[$i][0])) echo $wpcrown_category_custom_field_option[$i][0]; ?>" size="12">
 
 								
 				              
@@ -526,17 +428,22 @@ get_header();  ?>
 				                	}
 				              	?>
 
+
 				            </div>
 
 				      	<?php } ?>
 
-				
-							<input type="text" placeholder="Price" id="post_price" name="post_price" value="<?php echo $post_price; ?>" size="12" maxlength="10" class="form-text required input-textarea half">
+						
+						<div class="clearfix"></div>
+							
+							<input type="text" id="post_price" name="post_price" placeholder="<?php _e('Цена', 'agrg') ?>"  size="12" class="form-text required input-textarea half">
 							<?php
 								$locations= $redux_demo['locations'];
 								if(!empty($locations)){
-								echo '<select name="post_location" id="post_location" >';
-								echo '<option>'.$post_location.'</option>';
+								?>
+								<select name="post_location" id="post_location" >
+								<option value="Not Provided"><?php _e('Выбрать местоположение', 'agrg'); ?></option>
+								<?php
 									$comma_separated = explode(",", $locations);
 									foreach($comma_separated as $comma){
 										echo '<option>'.$comma.'</option>';
@@ -544,10 +451,8 @@ get_header();  ?>
 								echo '</select>';
 								}else{
 							?>
-							<input type="text" placeholder="Location" id="post_location" name="post_location" value="<?php echo $post_location; ?>" size="12" maxlength="110" class="form-text required input-textarea half last">
+							<input type="text" id="post_location" name="post_location" placeholder="<?php _e('Местоположение', 'agrg') ?>"  size="12" maxlength="110" class="form-text last required input-textarea half">
 							<?php } ?>
-							
-
 						<?php 
 								
 							$settings = array(
@@ -565,228 +470,45 @@ get_header();  ?>
 								)
 							);
 									
-							wp_editor( $content, 'postContent', $settings );
+							wp_editor( $postContent, 'postContent', $settings );
 
 						?>
 
+						
+						
 						<div id="map-container">
 
-							<input id="address" placeholder="Address" name="address" type="textbox" value="<?php echo $post_address; ?>" class="input-textarea half">
-							<?php
+							<input id="address" name="address" type="textbox" placeholder="<?php _e('Адрес', 'agrg') ?>"  class="input-textarea half">
+							<input type="text" id="post_tags" name="post_tags" placeholder="<?php _e('Метки', 'agrg') ?>"  size="12" maxlength="110" class="form-text required last input-textarea half">
 
-								echo "<input type='text' id='post_tags' placeholder='Tags' name='post_tags' value='";
+							<p class="help-block"><?php _e('Начните писать адрес и выберите в выпавшем списке.', 'agrg') ?></p>
 
-								$posttags = get_the_tags($current_post);
-								if ($posttags) {
-								  foreach($posttags as $tag) {
-									$tags_list = $tag->name . ', '; 
-									echo $tags_list;
-								  }
-								}
-
-							 	echo "' size='12' maxlength='110' class='form-text last required input-textarea half'>"; 
-
-							 ?>
-
-                                                    <p class="help-block"><?php _e('Начните вводить адрес для выпадения списка.', 'agrg') ?></p>
-							
-						    <div id="map-canvas"></div>
-
-						    <script type="text/javascript">
-
-								jQuery(document).ready(function($) {
-
-									var geocoder;
-									var map;
-									var marker;
-
-									var geocoder = new google.maps.Geocoder();
-
-									function geocodePosition(pos) {
-									  geocoder.geocode({
-									    latLng: pos
-									  }, function(responses) {
-									    if (responses && responses.length > 0) {
-									      updateMarkerAddress(responses[0].formatted_address);
-									    } else {
-									      updateMarkerAddress('Cannot determine address at this location.');
-									    }
-									  });
-									}
-
-									function updateMarkerPosition(latLng) {
-									  jQuery('#latitude').val(latLng.lat());
-									  jQuery('#longitude').val(latLng.lng());
-									}
-
-									function updateMarkerAddress(str) {
-									  jQuery('#address').val(str);
-									}
-
-									function initialize() {
-
-									  var latlng = new google.maps.LatLng(<?php echo $post_latitude; ?>, <?php echo $post_longitude; ?>);
-									  var mapOptions = {
-									    zoom: <?php echo $mapZoom; ?>,
-									    center: latlng
-									  }
-
-									  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-									  geocoder = new google.maps.Geocoder();
-
-									  marker = new google.maps.Marker({
-									  	position: latlng,
-									    map: map,
-									    draggable: true
-									  });
-
-									  // Add dragging event listeners.
-									  google.maps.event.addListener(marker, 'dragstart', function() {
-									    updateMarkerAddress('Dragging...');
-									  });
-									  
-									  google.maps.event.addListener(marker, 'drag', function() {
-									    updateMarkerPosition(marker.getPosition());
-									  });
-									  
-									  google.maps.event.addListener(marker, 'dragend', function() {
-									    geocodePosition(marker.getPosition());
-									  });
-
-									}
-
-									google.maps.event.addDomListener(window, 'load', initialize);
-
-									jQuery(document).ready(function() { 
-									         
-									  initialize();
-									          
-									  jQuery(function() {
-									    jQuery("#address").autocomplete({
-									      //This bit uses the geocoder to fetch address values
-									      source: function(request, response) {
-									        geocoder.geocode( {'address': request.term }, function(results, status) {
-									          response(jQuery.map(results, function(item) {
-									            return {
-									              label:  item.formatted_address,
-									              value: item.formatted_address,
-									              latitude: item.geometry.location.lat(),
-									              longitude: item.geometry.location.lng()
-									            }
-									          }));
-									        })
-									      },
-									      //This bit is executed upon selection of an address
-									      select: function(event, ui) {
-									        jQuery("#latitude").val(ui.item.latitude);
-									        jQuery("#longitude").val(ui.item.longitude);
-
-									        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-
-									        marker.setPosition(location);
-									        map.setZoom(16);
-									        map.setCenter(location);
-
-									      }
-									    });
-									  });
-									  
-									  //Add listener to marker for reverse geocoding
-									  google.maps.event.addListener(marker, 'drag', function() {
-									    geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
-									      if (status == google.maps.GeocoderStatus.OK) {
-									        if (results[0]) {
-									          jQuery('#address').val(results[0].formatted_address);
-									          jQuery('#latitude').val(marker.getPosition().lat());
-									          jQuery('#longitude').val(marker.getPosition().lng());
-									        }
-									      }
-									    });
-									  });
-									  
-									});
-
-								});
-
-						    </script>
-
-						</div>
+						  
 
 
+ 
 
-							<input type="text" placeholder="Latitude" id="latitude" name="latitude" value="<?php echo $post_latitude; ?>" size="12" maxlength="10" class="form-text required input-textarea half">
-
-
-							<input type="text" placeholder="Longitude" id="longitude" name="longitude" value="<?php echo $post_longitude; ?>" size="12" maxlength="10" class="form-text required last input-textarea half">
-
+						<div class="clearfix"></div>
 						
 
-						<fieldset class="input-title">
+							
+						
 
-							<label for="edit-field-category-und" class="control-label"><?php _e('Фотографии', 'agrg') ?></label>
+						<fieldset class="input-title" style="margin-top:10px;">
 
-							<div id="edit-post-images-block">
-
-								<?php require_once(TEMPLATEPATH . '/inc/BFI_Thumb.php'); ?>
-
-								<?php
-
-									$params = array( 'width' => 110, 'height' => 70, 'crop' => true );
-
-									$attachments = get_children(array('post_parent' => $current_post,
-													'post_status' => 'inherit',
-													'post_type' => 'attachment',
-													'post_mime_type' => 'image',
-													'order' => 'ASC',
-													'orderby' => 'menu_order ID'));
-
-									foreach($attachments as $att_id => $attachment) {
-													$attachment_ID = $attachment->ID;
-													$full_img_url = wp_get_attachment_url($attachment->ID);
-													$split_pos = strpos($full_img_url, 'wp-content');
-													$split_len = (strlen($full_img_url) - $split_pos);
-													$abs_img_url = substr($full_img_url, $split_pos, $split_len);
-													$full_info = @getimagesize(ABSPATH.$abs_img_url);
-								?>
-
-									<div id="<?php echo $attachment_ID; ?>" class="edit-post-image-block">
-
-										<img class="edit-post-image" src="<?php echo bfi_thumb( "$full_img_url", $params ) ?>" />
-
-										<div class="remove-edit-post-image">
-											<i class="fa fa-minus-square-o"></i>
-											<span class="remImage"><?php _e('Удалить', 'agrg');?></span> 
-											<input type="hidden" name="" value="<?php echo $attachment_ID; ?>">
-										</div>
-
-									</div>
-								            
-
-								<?php
-									}
-								?>
-
-							</div>
-
-						</fieldset>
-
-						<fieldset class="input-title">
-
-							<label for="edit-field-category-und" class="control-label"><?php _e('Загрузить', 'agrg') ?></label>
+							<label for="edit-field-category-und" class="control-label"><?php _e('Загрузить фото', 'agrg') ?></label>
 							<input id="upload-images-ad" type="file" name="upload_attachment[]" multiple />
 
 						</fieldset>
 
 						
-						<fieldset class="input-title">
 
+						<fieldset class="input-title" style="margin-bottom:0px;">
 							
-							<textarea name="video" placeholder="IF you want to show video , Put here an embed code." id="video" cols="8" rows="5" ><?php echo $post_video; ?></textarea>
-							<p class="help-block"><?php _e('Если хотите смотреть видео, то вставьте embed код. (youtube, vimeo, и т.д.)', 'agrg') ?></p>
+							<textarea name="video" id="video" cols="8" rows="5" placeholder="<?php _e('Сюда можно вставить видео-код, если вы хотите!', 'agrg') ?>" ></textarea>
+							<p class="help-block"><?php _e('Добавить видео эмбед код сюда (youtube, vimeo, и т. д.)', 'agrg') ?></p>
 
 						</fieldset>
-
 
 						<?php 
 
@@ -802,49 +524,20 @@ get_header();  ?>
 
 							<label for="edit-field-category-und" class="control-label"><?php _e('Тип объявления', 'agrg') ?></label>
 
-								<?php
-
-									$featured_post = "0";
-
-									$post_price_plan_activation_date = get_post_meta($current_post, 'post_price_plan_activation_date', true);
-									$post_price_plan_expiration_date = get_post_meta($current_post, 'post_price_plan_expiration_date', true);
-									$post_price_plan_expiration_date_noarmal = get_post_meta($current_post, 'post_price_plan_expiration_date_normal', true);
-									$todayDate = strtotime(date('m/d/Y h:i:s'));
-								    $expireDate = $post_price_plan_expiration_date;
-
-									if(!empty($post_price_plan_activation_date)) {
-
-										if(($todayDate < $expireDate) or $post_price_plan_expiration_date == 0) {
-											$featured_post = "1";
-										}
-
-									} 
-
-								?>
-
-								<?php if($featured_post == "1") { ?>
-
-									<div class="field-type-list-boolean field-name-field-featured field-widget-options-onoff form-wrapper" id="edit-field-featured">
-
-										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="feature-post" name="feature-post" value="featured" class="form-checkbox" checked><?php _e('Featured. Expires:', 'agrg') ?> <?php if($post_price_plan_expiration_date_noarmal == 0) { ?> <?php _e( 'Never', 'agrg' ); ?> <?php } else { echo $post_price_plan_expiration_date_noarmal; } ?>
-										</label>
-
-									</div>
-
-								<?php } else { ?>
-
 								<?php if($featPlanMesage != '') { ?>
-
 									<span class="error" style="color: #d20000; margin-bottom: 20px; font-size: 18px; font-weight: bold; float: left;"><?php echo $featPlanMesage; ?></span>
 									<div class="clearfix"></div>
-
 								<?php } ?>
 
 								<div class="field-type-list-boolean field-name-field-featured field-widget-options-onoff form-wrapper" id="edit-field-featured">
+												<?php 
 
+													global $redux_demo; 
+													$regular_ads = $redux_demo['regular-ads'];
+
+												?>
 										<?php 
-
+				
 										    global $current_user;
 			      							get_currentuserinfo();
 
@@ -883,7 +576,7 @@ get_header();  ?>
 																?>
 
 															<label class="option checkbox control-label" for="edit-field-featured-und">
-																<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="<?php echo $info->main_id; ?>" class="form-checkbox" ><?php echo $infoAds; ?> <?php if($infoAds>1) { ?>Ads<?php } elseif($infoAds=="Unlimited") { ?>Ads<?php } elseif($infoAds==1) { ?>Ad<?php } ?> active for <?php echo $infoDays ?> days (<?php echo $availableADS; ?> <?php if($availableADS>1) { ?>Ads<?php } elseif($availableADS=="Unlimited") { ?>Ads<?php } elseif($availableADS==1) { ?>Ad<?php } ?> available)
+																<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="<?php echo $info->main_id; ?>" class="form-checkbox" <?php if($regular_ads == 0 ){ echo 'checked';} ?> ><?php echo $infoAds; ?> <?php if($infoAds>1) { ?>Ads<?php } elseif($infoAds=="Unlimited") { ?>Ads<?php } elseif($infoAds==1) { ?>Ad<?php } ?> active for <?php echo $infoDays ?> days (<?php echo $availableADS; ?> <?php if($availableADS>1) { ?>Ads<?php } elseif($availableADS=="Unlimited") { ?>Ads<?php } elseif($availableADS==1) { ?>Ad<?php } ?> available)
 															</label>
 
 													<?php }
@@ -892,42 +585,38 @@ get_header();  ?>
 										}
 													
 									?>
+									
+									<?php if($regular_ads == 1 ){ ?>
+										<?php if($featuredADS != "0"){ ?>
 
-									<?php if($featuredADS != "0"){ ?>
+											<label class="option checkbox control-label" for="edit-field-featured-und">
+												<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" checked><?php _e('Регулярные', 'agrg') ?>
+												<input type="hidden" name="regular-ads-enable" value=""  >
+											</label>
 
-										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" <?php if($featured_post == "0") { ?>checked<?php } ?>><?php _e( 'Регулярные', 'agrg' ); ?>
-										</label>
-
+										<?php } ?>
 									<?php } ?>
 
 									<?php 
-
-										global $redux_demo; 
 										$featured_plans = $redux_demo['featured_plans'];
-
 									?>
-									<?php if($featuredADS == "0"){ ?>
-										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input disabled="disabled" type="checkbox" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox"><?php _e( 'Рекомендуемые', 'agrg' ); ?>
-										</label>
-										<p><?php _e( 'В настоящее время у вас нет активного плана. Вы должны приобрести. ', 'agrg' ); ?><a href="<?php echo $featured_plans; ?>" target="_blank"><?php _e( 'Популярные тарифные планы', 'agrg' ); ?></a><?php _e( 'чтобы иметь возможность опубликовать.', 'agrg' ); ?></p>
+									<?php if($featuredADS == "0" || empty($result)){ ?>
+										<p><?php _e('В настоящее время у вас нет активного плана. Нужно приобрести.', 'agrg') ?> <a href="<?php echo $featured_plans; ?>" target="_blank"><?php _e('Популярный тарифный план', 'agrg') ?></a> <?php _e('чтобы иметь возможность опубликовать.', 'agrg') ?></p>
 									<?php } ?>
 
-								</div>
-
-							<?php } ?>
+							</div>
 
 						</fieldset>
 
 						<?php } ?>
 
 						
+
 						<div class="publish-ad-button">
 							<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
-							<div class="btn-container">
-								<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Обновить Объявление', 'agrg') ?></button>
+							<div class="btn-container">		
+								<button class="btn form-submit full-btn" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Разместить объявление', 'agrg') ?></button>
 							</div>
 						</div>
 
@@ -938,7 +627,9 @@ get_header();  ?>
 	    	</div>
 
 	    	<div class="span4">
-			
+
+
+
 		    	<?php get_sidebar('pages'); ?>
 
 	    	</div>
@@ -998,7 +689,7 @@ get_header();  ?>
 
 							$post_price_plan_activation_date = get_post_meta($post->ID, 'post_price_plan_activation_date', true);
 							$post_price_plan_expiration_date = get_post_meta($post->ID, 'post_price_plan_expiration_date', true);
-							$post_price_plan_expiration_date_noarmal = get_post_meta($current_post, 'post_price_plan_expiration_date_normal', true);
+							$post_price_plan_expiration_date_noarmal = get_post_meta($post->ID, 'post_price_plan_expiration_date_normal', true);
 							$todayDate = strtotime(date('m/d/Y h:i:s'));
 							$expireDate = $post_price_plan_expiration_date;
 

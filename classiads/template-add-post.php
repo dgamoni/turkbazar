@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: New Ad Page
+ * Template name: New Ad Page2
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -286,7 +286,7 @@ get_header(); ?>
 							<?php endwhile; ?>
 							<?php $wp_query = null; $wp_query = $temp;?>
 
-							<span class="ad-detail-info"><?php _e( 'Featured Ads', 'agrg' ); ?>
+							<span class="ad-detail-info"><?php _e( 'Популярные объявления', 'agrg' ); ?>
 								<span class="ad-detail"><?php echo $FeaturedAdsCount ?></span>
 							</span>
 						 <?php
@@ -318,7 +318,7 @@ get_header(); ?>
 
 																?>
 
-															<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+															<span class="ad-detail-info"><?php _e( 'Осталось популярных объявлений', 'agrg' ); ?>
 																<span class="ad-detail"><?php  echo $availableADS; ?></span>
 															</span>
 
@@ -326,7 +326,7 @@ get_header(); ?>
 													}else{
 													if($featuredADS == 0){
 														?>
-														<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+														<span class="ad-detail-info"><?php _e( 'Осталось популярных объявлений', 'agrg' ); ?>
 														<span class="ad-detail">0</span>
 														</span>
 														<?php
@@ -336,7 +336,7 @@ get_header(); ?>
 												}
 											}else{
 										?>
-										<span class="ad-detail-info"><?php _e( 'Featured Ads left', 'agrg' ); ?>
+										<span class="ad-detail-info"><?php _e( 'Осталось популярных объявлений', 'agrg' ); ?>
 										<span class="ad-detail">0</span>
 										</span>
 										<?php } ?>
@@ -349,7 +349,7 @@ get_header(); ?>
 				</div>
 
 				<div id="upload-ad" class="ad-detail-content">
-					<h3 style="margin-top: 7px;"><?php _e('NEW AD', 'agrg') ?></h3>
+					<h3 style="margin-top: 7px;"><?php _e('НОВОЕ ОБЪЯВЛЕНИЕ', 'agrg') ?></h3>
 						<div class="h3-seprator"></div>
 					<form class="form-item" action="" id="primaryPostForm" method="POST" enctype="multipart/form-data">
 
@@ -366,7 +366,7 @@ get_header(); ?>
 
 						
 							
-							<input type="text" id="postTitle" name="postTitle" placeholder="<?php _e('Заголовок объявления', 'agrg') ?>" size="60" maxlength="255" class="form-text required input-textarea half">
+							<input type="text" id="postTitle" name="postTitle" placeholder="Заголовок объявления" size="60" maxlength="255" class="form-text required input-textarea half">
 
 								<?php wp_dropdown_categories( 'show_option_none=Category&hide_empty=0&hierarchical=1&id=catID' ); ?>
 
@@ -429,12 +429,12 @@ get_header(); ?>
 						
 						<div class="clearfix"></div>
 							
-							<input type="text" id="post_price" name="post_price" placeholder="<?php _e('Price', 'agrg') ?>"  size="12" class="form-text required input-textarea half">
+							<input type="text" id="post_price" name="post_price" placeholder="Стоимость"  size="12" class="form-text required input-textarea half">
 							<?php
 								$locations= $redux_demo['locations'];
 								if(!empty($locations)){
 								echo '<select name="post_location" id="post_location" >';
-								echo '<option value="Not Provided">'._e('Select Location', 'agrg') .'</option>';
+								echo '<option value="Not Provided">Выбрать местоположение</option>';
 									$comma_separated = explode(",", $locations);
 									foreach($comma_separated as $comma){
 										echo '<option>'.$comma.'</option>';
@@ -442,7 +442,7 @@ get_header(); ?>
 								echo '</select>';
 								}else{
 							?>
-							<input type="text" id="post_location" name="post_location" placeholder="<?php _e('Location', 'agrg') ?>"  size="12" maxlength="110" class="form-text last required input-textarea half">
+							<input type="text" id="post_location" name="post_location" placeholder="Выбрать местоположение"  size="12" maxlength="110" class="form-text last required input-textarea half">
 							<?php } ?>
 						<?php 
 								
@@ -469,8 +469,8 @@ get_header(); ?>
 						
 						<div id="map-container">
 
-							<input id="address" name="address" type="textbox" placeholder="<?php _e('Address', 'agrg') ?>"  class="input-textarea half">
-							<input type="text" id="post_tags" name="post_tags" placeholder="<?php _e('Tags', 'agrg') ?>"  size="12" maxlength="110" class="form-text required last input-textarea half">
+							<input id="address" name="address" type="textbox" placeholder="Адрес"  class="input-textarea half">
+							<input type="text" id="post_tags" name="post_tags" placeholder="Теги"  size="12" maxlength="110" class="form-text required last input-textarea half">
 
 							<p class="help-block"><?php _e('Start typing an address  and select from the dropdown.', 'agrg') ?></p>
 
@@ -601,13 +601,13 @@ get_header(); ?>
 						
 
 							
-							<input type="text" id="latitude" name="latitude" placeholder="<?php _e('Latitude', 'agrg') ?>"  size="12" maxlength="10" class="form-text required input-textarea half">
+							<input type="text" id="latitude" name="latitude" placeholder="Latitude"  size="12" maxlength="10" class="form-text required input-textarea half">
 
-							<input type="text" id="longitude" name="longitude" placeholder="<?php _e('Longitude', 'agrg') ?>"  size="12" maxlength="10" class="form-text last required input-textarea half">
+							<input type="text" id="longitude" name="longitude" placeholder="Longitude"  size="12" maxlength="10" class="form-text last required input-textarea half">
 
 						<fieldset class="input-title" style="margin-top:10px;">
 
-							<label for="edit-field-category-und" class="control-label"><?php _e('Upload Image', 'agrg') ?></label>
+							<label for="edit-field-category-und" class="control-label"><?php _e('Загрузить фото', 'agrg') ?></label>
 							<input id="upload-images-ad" type="file" name="upload_attachment[]" multiple />
 
 						</fieldset>
@@ -616,8 +616,8 @@ get_header(); ?>
 
 						<fieldset class="input-title" style="margin-bottom:0px;">
 							
-							<textarea name="video" id="video" cols="8" rows="5" placeholder="<?php _e('Video Code If You Want!', 'agrg') ?>" ></textarea>
-							<p class="help-block"><?php _e('Add video embedding code here (youtube, vimeo, etc)', 'agrg') ?></p>
+							<textarea name="video" id="video" cols="8" rows="5" placeholder="Сюда можно вставить видео-код, если вы хотите!" ></textarea>
+							<p class="help-block"><?php _e('Добавить видео эмбед код сюда (youtube, vimeo, и т. д.)', 'agrg') ?></p>
 
 						</fieldset>
 
@@ -633,7 +633,7 @@ get_header(); ?>
 
 						<fieldset class="input-title">
 
-							<label for="edit-field-category-und" class="control-label"><?php _e('Ad Type', 'agrg') ?></label>
+							<label for="edit-field-category-und" class="control-label"><?php _e('Тип объявления', 'agrg') ?></label>
 
 								<?php if($featPlanMesage != '') { ?>
 									<span class="error" style="color: #d20000; margin-bottom: 20px; font-size: 18px; font-weight: bold; float: left;"><?php echo $featPlanMesage; ?></span>
@@ -695,7 +695,7 @@ get_header(); ?>
 									<?php if($featuredADS != "0"){ ?>
 
 										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" checked><?php _e('Regular', 'agrg') ?>
+											<input style="margin-right: 10px;margin-top: -2px;" type="radio" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox" checked>Regular
 										</label>
 
 									<?php } ?>
@@ -708,9 +708,9 @@ get_header(); ?>
 									?>
 									<?php if($featuredADS == "0"){ ?>
 										<label class="option checkbox control-label" for="edit-field-featured-und">
-											<input disabled="disabled" type="checkbox" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox"><?php _e('Featured', 'agrg') ?>
+											<input disabled="disabled" type="checkbox" id="edit-feature-plan" name="edit-feature-plan" value="" class="form-checkbox">Featured
 										</label>
-										<p><?php _e('Currently you have no active plan. You must purchase a', 'agrg') ?> <a href="<?php echo $featured_plans; ?>" target="_blank"><?php _e('Featured Pricing Plan', 'agrg') ?></a> <?php _e('to be able to publish a Featured Ad.', 'agrg') ?></p>
+										<p>В настоящее время у вас нет активного плана. Нужно приобрести.<a href="<?php echo $featured_plans; ?>" target="_blank">Featured Pricing Plan</a> to be able to publish a Featured Ad.</p>
 									<?php } ?>
 
 							</div>
@@ -725,7 +725,7 @@ get_header(); ?>
 							<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
 							<div class="btn-container">		
-								<button class="btn form-submit full-btn" id="edit-submit" name="op" value="Разместить Объявление" type="submit"><?php _e('Разместить Объявление', 'agrg') ?></button>
+								<button class="btn form-submit full-btn" id="edit-submit" name="op" value="Publish Ad" type="submit"><?php _e('Разместить объявление', 'agrg') ?></button>
 							</div>
 						</div>
 
