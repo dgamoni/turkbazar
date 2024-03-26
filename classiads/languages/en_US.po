@@ -1,0 +1,2224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Classiads theme\n"
+"POT-Creation-Date: 2014-12-20 13:51+0500\n"
+"PO-Revision-Date: 2014-12-20 13:51+0500\n"
+"Last-Translator: \n"
+"Language-Team: Imran cheema <support@designinvento.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:24
+msgid "404 ERROR"
+msgstr ""
+
+#: ../404.php:39
+msgid "Вернуться домой..."
+msgstr ""
+
+#: ../archive.php:51
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../archive.php:61
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../archive.php:70
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../archive.php:90
+msgid "Archives"
+msgstr ""
+
+#: ../archive.php:368 ../category.php:424 ../page.php:411 ../search.php:502
+#: ../template-all-posts.php:83 ../template-all-posts.php:478
+#: ../template-all-posts.php:615 ../template-full-width.php:81
+#: ../template-full-width.php:476 ../template-full-width.php:613
+#: ../template-homepage-v1.php:127 ../template-homepage-v1.php:526
+#: ../template-homepage-v1.php:663 ../template-locations.php:327
+msgid "Категория..."
+msgstr ""
+
+#: ../archive.php:406 ../category.php:462 ../page.php:378 ../search.php:540
+#: ../template-all-posts.php:121 ../template-all-posts.php:516
+#: ../template-all-posts.php:653 ../template-full-width.php:119
+#: ../template-full-width.php:514 ../template-full-width.php:651
+#: ../template-homepage-v1.php:165 ../template-homepage-v1.php:564
+#: ../template-homepage-v1.php:701 ../template-locations.php:365
+msgid "Местоположение..."
+msgstr ""
+
+#: ../archive.php:463 ../category.php:519 ../page.php:366 ../search.php:597
+#: ../template-all-posts.php:178 ../template-all-posts.php:573
+#: ../template-all-posts.php:710 ../template-full-width.php:176
+#: ../template-full-width.php:571 ../template-full-width.php:708
+#: ../template-homepage-v1.php:224 ../template-homepage-v1.php:621
+#: ../template-homepage-v1.php:758
+msgid "Введите слово..."
+msgstr ""
+
+#: ../author.php:123 ../template-add-post.php:210
+#: ../template-edit-post.php:306 ../template-edit-profile.php:123
+#: ../template-profile.php:68
+msgid "ПРОСМОТР ПРОФИЛЯ"
+msgstr ""
+
+#: ../author.php:149 ../template-add-post.php:236
+#: ../template-edit-post.php:332 ../template-edit-profile.php:156
+#: ../template-profile.php:94
+msgid "Regular Ads"
+msgstr ""
+
+#: ../author.php:202 ../template-add-post.php:289
+#: ../template-edit-post.php:385 ../template-edit-profile.php:209
+#: ../template-profile.php:147 ../inc/plans.php:41
+#: ../ReduxFramework/sample/sample-config.php:371
+msgid "Featured Ads"
+msgstr ""
+
+#: ../author.php:218 ../template-add-post.php:321 ../template-add-post.php:329
+#: ../template-add-post.php:339 ../template-edit-post.php:417
+#: ../template-edit-post.php:425 ../template-edit-post.php:435
+#: ../template-edit-profile.php:241 ../template-edit-profile.php:249
+#: ../template-edit-profile.php:259 ../template-profile.php:179
+#: ../template-profile.php:187 ../template-profile.php:197
+msgid "Featured Ads left"
+msgstr ""
+
+#: ../author.php:231
+msgid "ADS"
+msgstr ""
+
+#: ../author.php:357 ../single.php:601
+msgid "LEAVE MESSAGE TO AUTHOR"
+msgstr ""
+
+#: ../author.php:410 ../single.php:654 ../template-contact.php:239
+msgid "Human test. Please input the result of 5+3=?"
+msgstr ""
+
+#: ../category.php:111
+msgid "ads in"
+msgstr ""
+
+#: ../category.php:143
+msgid "subcategories"
+msgstr ""
+
+#: ../category.php:758 ../index.php:240 ../template-all-posts.php:951
+#: ../template-homepage-v1.php:1269
+msgid "Последние объявления"
+msgstr ""
+
+#: ../category.php:761 ../index.php:243 ../template-all-posts.php:954
+#: ../template-homepage-v1.php:1272
+msgid "Популярные объявления"
+msgstr ""
+
+#: ../category.php:764 ../index.php:246 ../template-all-posts.php:957
+#: ../template-homepage-v1.php:1275
+msgid "Случайные объявления"
+msgstr ""
+
+#: ../category.php:1131
+msgid "SUBCATEGORIES"
+msgstr ""
+
+#: ../comments.php:45
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:46
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:52
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:22
+msgid "Sorry, but nothing matched your search terms."
+msgstr ""
+
+#: ../content-none.php:26
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+
+#: ../functions.php:118
+msgid "Меню навигации"
+msgstr ""
+
+#: ../functions.php:219
+msgid "Главное меню"
+msgstr ""
+
+#: ../functions.php:220
+msgid "Нижнее меню"
+msgstr ""
+
+#: ../functions.php:637 ../inc/class-tgm-plugin-activation.php:196
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../functions.php:638 ../inc/class-tgm-plugin-activation.php:197
+msgid "Install Plugins"
+msgstr ""
+
+#: ../functions.php:639 ../inc/class-tgm-plugin-activation.php:198
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../functions.php:640
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../functions.php:651 ../inc/class-tgm-plugin-activation.php:210
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../functions.php:652 ../inc/class-tgm-plugin-activation.php:212
+#: ../inc/class-tgm-plugin-activation.php:1951
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../functions.php:653
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../functions.php:893
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:908
+msgid "Footer Widget "
+msgstr ""
+
+#: ../functions.php:910
+msgid "Appears in the footer section of the site."
+msgstr ""
+
+#: ../functions.php:918
+msgid "Forum Widget Area"
+msgstr ""
+
+#: ../functions.php:920 ../functions.php:934
+msgid "Appears on posts and pages in the sidebar."
+msgstr ""
+
+#: ../functions.php:932
+msgid "Pages Widget Area"
+msgstr ""
+
+#: ../functions.php:962
+msgid "Posts navigation"
+msgstr ""
+
+#: ../functions.php:966
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../functions.php:970
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../functions.php:998
+msgid "Post navigation"
+msgstr ""
+
+#: ../functions.php:1022
+msgid "Sticky"
+msgstr ""
+
+#: ../functions.php:1028 ../functions.php:1034
+msgid ", "
+msgstr ""
+
+#: ../functions.php:1043
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../functions.php:1069
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: ../functions.php:1284
+msgid "Categories Custom Fields"
+msgstr ""
+
+#: ../functions.php:1294
+msgid "Выберите категорию:"
+msgstr ""
+
+#: ../functions.php:1357
+msgid "Add Custom Fields to: "
+msgstr ""
+
+#: ../functions.php:1368 ../functions.php:1391
+msgid "Custom field title"
+msgstr ""
+
+#: ../header.php:79
+msgid "Разместить объявление"
+msgstr ""
+
+#: ../header.php:83
+msgid "Мой аккаунт"
+msgstr ""
+
+#: ../header.php:87
+msgid "Выйти"
+msgstr ""
+
+#: ../header.php:95
+msgid "Регистрация"
+msgstr ""
+
+#: ../header.php:98 ../template-login.php:109
+msgid "Войти"
+msgstr ""
+
+#: ../header.php:113
+msgid "Call us"
+msgstr ""
+
+#: ../header.php:116 ../template-register.php:171
+msgid "Email Адрес"
+msgstr ""
+
+#: ../page.php:150 ../single.php:420 ../template-left-sidebar.php:152
+msgid "Детали"
+msgstr ""
+
+#: ../page.php:324
+msgid "Search around my position"
+msgstr ""
+
+#: ../page.php:473
+msgid "Поиск"
+msgstr ""
+
+#: ../search.php:52
+msgid "Search Results for: "
+msgstr ""
+
+#: ../search.php:1107 ../search.php:1554
+msgid "No results found for the selected search criteria."
+msgstr ""
+
+#: ../search.php:1121
+msgid "REGULAR ADs"
+msgstr ""
+
+#: ../single.php:130 ../template-profile.php:311
+msgid "Редактировать"
+msgstr ""
+
+#: ../single.php:138 ../single.php:247 ../inc/shortcode.lib.php:650
+#: ../inc/shortcode.lib.php:814 ../inc/shortcode.lib.php:943
+#: ../inc/shortcode.lib.php:1113 ../inc/shortcode.lib.php:1240
+#: ../inc/shortcode.lib.php:1407 ../inc/shortcode.lib.php:4138
+#: ../inc/shortcode.lib.php:4308 ../inc/shortcode.lib.php:4437
+#: ../inc/shortcode.lib.php:4607 ../inc/shortcode.lib.php:4737
+#: ../inc/shortcode.lib.php:4908 ../inc/shortcode.lib.php:5037
+#: ../inc/shortcode.lib.php:5207 ../inc/shortcode.lib.php:5335
+#: ../inc/shortcode.lib.php:5505 ../inc/shortcode.lib.php:5634
+#: ../inc/shortcode.lib.php:5805 ../inc/shortcode.lib.php:5933
+#: ../inc/shortcode.lib.php:6103 ../inc/shortcode.lib.php:6231
+#: ../inc/shortcode.lib.php:6401 ../inc/shortcode.lib.php:6531
+#: ../inc/shortcode.lib.php:6702
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: ../single.php:204
+msgid "Видео"
+msgstr ""
+
+#: ../single.php:272
+msgid "Добавлено"
+msgstr ""
+
+#: ../single.php:281 ../template-add-post.php:445 ../inc/post_meta.php:54
+msgid "Местоположение"
+msgstr ""
+
+#: ../single.php:287
+msgid "Просмотры"
+msgstr ""
+
+#: ../single.php:294
+msgid "Рейтинг"
+msgstr ""
+
+#: ../single.php:308
+msgid "ОПИСАНИЯ:"
+msgstr ""
+
+#: ../single.php:313 ../template-add-post.php:473
+#: ../ReduxFramework/sample/sample-config.php:53
+msgid "Метки"
+msgstr ""
+
+#: ../single.php:553 ../template-add-post.php:472
+msgid "Адрес"
+msgstr ""
+
+#: ../single.php:569
+msgid "Call"
+msgstr ""
+
+#: ../single.php:583
+msgid "Вебсайт"
+msgstr ""
+
+#: ../single.php:691
+msgid "RELATED ADS"
+msgstr ""
+
+#: ../taxonomy-post_format.php:23
+#, php-format
+msgid "%s Archives"
+msgstr ""
+
+#: ../template-add-post.php:352
+msgid "НОВОЕ ОБЪЯВЛЕНИЕ"
+msgstr ""
+
+#: ../template-add-post.php:369
+msgid "Ad Title Goes here |"
+msgstr ""
+
+#: ../template-add-post.php:432 ../inc/plans.php:76 ../inc/post_meta.php:9
+msgid "Прайс"
+msgstr ""
+
+#: ../template-add-post.php:437
+msgid "Выбрать местоположение"
+msgstr ""
+
+#: ../template-add-post.php:475
+msgid "Start typing an address  and select from the dropdown."
+msgstr ""
+
+#: ../template-add-post.php:604 ../inc/post_meta.php:97
+#: ../ReduxFramework/sample/sample-config.php:1297
+msgid "Latitude"
+msgstr ""
+
+#: ../template-add-post.php:606 ../inc/post_meta.php:142
+#: ../ReduxFramework/sample/sample-config.php:1306
+msgid "Longitude"
+msgstr ""
+
+#: ../template-add-post.php:610
+msgid "Загрузить фото"
+msgstr ""
+
+#: ../template-add-post.php:619
+msgid "Video Code If You Want!"
+msgstr ""
+
+#: ../template-add-post.php:620 ../template-edit-post.php:784
+msgid "Add video embedding code here (youtube, vimeo, etc)"
+msgstr ""
+
+#: ../template-add-post.php:636 ../template-edit-post.php:801
+msgid "Ad Type"
+msgstr ""
+
+#: ../template-add-post.php:698 ../template-edit-post.php:897
+#: ../ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:84
+msgid "Regular"
+msgstr ""
+
+#: ../template-add-post.php:711 ../template-edit-post.php:910
+msgid "Featured"
+msgstr ""
+
+#: ../template-add-post.php:713
+msgid "Currently you have no active plan. You must purchase a"
+msgstr ""
+
+#: ../template-add-post.php:713 ../template-edit-post.php:912
+msgid "Featured Pricing Plan"
+msgstr ""
+
+#: ../template-add-post.php:713
+msgid "to be able to publish a Featured Ad."
+msgstr ""
+
+#: ../template-add-post.php:728 ../template-login.php:109
+msgid "Publish Ad"
+msgstr ""
+
+#: ../template-all-categories.php:95 ../template-homepage-v1.php:1034
+msgid "Добавленные объявления"
+msgstr ""
+
+#: ../template-all-categories.php:209 ../template-homepage-v1.php:1156
+msgid "Others"
+msgstr ""
+
+#: ../template-edit-post.php:591
+msgid "Start typing an address and select from the dropdown."
+msgstr ""
+
+#: ../template-edit-post.php:725
+msgid "Добавленные фото"
+msgstr ""
+
+#: ../template-edit-post.php:757
+#: ../ReduxFramework/ReduxCore/inc/fields/media/field_media.php:156
+#: ../ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:74
+#: ../ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:77
+#: ../ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:80
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:123
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:183
+msgid "Удалить"
+msgstr ""
+
+#: ../template-edit-post.php:774
+msgid "Upload Images"
+msgstr ""
+
+#: ../template-edit-post.php:828
+msgid "Featured. Expires:"
+msgstr ""
+
+#: ../template-edit-post.php:828
+msgid "Никогда"
+msgstr ""
+
+#: ../template-edit-post.php:912
+msgid "Currently you have no active plan. You must purchase a "
+msgstr ""
+
+#: ../template-edit-post.php:912
+msgid " to be able to publish a Featured Ad."
+msgstr ""
+
+#: ../template-edit-post.php:928
+msgid "Update Ad"
+msgstr ""
+
+#: ../template-edit-profile.php:153
+msgid "Add New Image"
+msgstr ""
+
+#: ../template-edit-profile.php:272
+msgid "EDIT PROFILE"
+msgstr ""
+
+#: ../template-edit-profile.php:325
+msgid ""
+"If you would like to change the password type a new one. Otherwise leave "
+"this blank."
+msgstr ""
+
+#: ../template-edit-profile.php:333
+msgid "Сохранить"
+msgstr ""
+
+#: ../template-homepage-v1.php:1182 ../template-homepage-v1.php:1404
+#: ../template-homepage-v1.php:1531 ../template-homepage-v1.php:1661
+msgid "View More"
+msgstr ""
+
+#: ../template-homepage-v1.php:1225
+msgid "Добавленное Местоположение"
+msgstr ""
+
+#: ../template-homepage-v1.php:1261
+msgid "ADVERTISEMENTS"
+msgstr ""
+
+#: ../template-login.php:69
+msgid "ВОЙТИ"
+msgstr ""
+
+#: ../template-login.php:81
+msgid "UserName"
+msgstr ""
+
+#: ../template-login.php:84 ../template-register.php:176
+#: ../ReduxFramework/ReduxCore/inc/fields/password/field_password.php:52
+msgid "Пароль"
+msgstr ""
+
+#: ../template-login.php:91
+msgid "Сохранить меня"
+msgstr ""
+
+#: ../template-login.php:112
+msgid "Забыд пароль?"
+msgstr ""
+
+#: ../template-login.php:120 ../template-reset.php:127
+msgid "Зарегистрировать!"
+msgstr ""
+
+#: ../template-login.php:123 ../template-register.php:205
+#: ../template-reset.php:130
+msgid "Войти с помощью социальной сети"
+msgstr ""
+
+#: ../template-login.php:141 ../template-register.php:223
+#: ../template-reset.php:148
+msgid "Войти с Facebook"
+msgstr ""
+
+#: ../template-login.php:161 ../template-register.php:243
+#: ../template-reset.php:168
+msgid "Войти с Twitter"
+msgstr ""
+
+#: ../template-login.php:181 ../template-register.php:263
+#: ../template-reset.php:188
+msgid "Войти с Google"
+msgstr ""
+
+#: ../template-login.php:199
+msgid "Are you a new here?"
+msgstr ""
+
+#: ../template-login.php:199
+msgid "Get Register Free"
+msgstr ""
+
+#: ../template-pricing-plans.php:62
+msgid "PRICING PLANS"
+msgstr ""
+
+#: ../template-pricing-plans.php:124
+msgid "Featured ads"
+msgstr ""
+
+#: ../template-pricing-plans.php:125
+msgid "Day"
+msgstr ""
+
+#: ../template-pricing-plans.php:126
+msgid "100% Secure!"
+msgstr ""
+
+#: ../template-pricing-plans.php:182
+msgid "Purchase Now"
+msgstr ""
+
+#: ../template-profile.php:91
+msgid "Edit Profile"
+msgstr ""
+
+#: ../template-profile.php:210
+msgid "PROFILE"
+msgstr ""
+
+#: ../template-profile.php:215
+msgid "Phone:"
+msgstr ""
+
+#: ../template-profile.php:217
+msgid "Email:"
+msgstr ""
+
+#: ../template-profile.php:219
+msgid "Website:"
+msgstr ""
+
+#: ../template-profile.php:221
+msgid "Address:"
+msgstr ""
+
+#: ../template-profile.php:225
+msgid "DESCRIPTION"
+msgstr ""
+
+#: ../template-profile.php:247
+msgid "MY ADS"
+msgstr ""
+
+#: ../template-profile.php:304
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: ../template-profile.php:306
+msgid "Confirm"
+msgstr ""
+
+#: ../template-profile.php:313
+#: ../ReduxFramework/ReduxCore/inc/fields/group/field_group.php:133
+#: ../ReduxFramework/ReduxCore/inc/fields/group/field_group.php:193
+msgid "Delete"
+msgstr ""
+
+#: ../template-register.php:45
+msgid "User name should not be empty"
+msgstr ""
+
+#: ../template-register.php:51
+msgid "Password must be 5 to 15 characters in length."
+msgstr ""
+
+#: ../template-register.php:61
+msgid "Password Mismatch"
+msgstr ""
+
+#: ../template-register.php:67 ../template-register.php:74
+msgid "Please enter a valid email."
+msgstr ""
+
+#: ../template-register.php:79
+msgid "Username or E-mail already exists. Please try another one."
+msgstr ""
+
+#: ../template-register.php:85
+msgid "Registration successful"
+msgstr ""
+
+#: ../template-register.php:134
+msgid "REGISTER"
+msgstr ""
+
+#: ../template-register.php:164
+msgid "User Name"
+msgstr ""
+
+#: ../template-register.php:179
+msgid "Retype Password"
+msgstr ""
+
+#: ../template-register.php:189 ../template-reset.php:115
+msgid "Submit"
+msgstr ""
+
+#: ../template-register.php:202
+msgid "Already have an acount ?"
+msgstr ""
+
+#: ../template-register.php:202
+msgid "Login Now"
+msgstr ""
+
+#: ../template-reset.php:91
+msgid "RESET PASSWORD"
+msgstr ""
+
+#: ../template-reset.php:110
+msgid "Put your email address for reset password."
+msgstr ""
+
+#: ../inc/back-compat.php:38 ../inc/back-compat.php:50
+#: ../inc/back-compat.php:65
+#, php-format
+msgid ""
+"WPAds requires at least WordPress version 3.6. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: ../inc/BFI_Thumb.php:120
+msgid ""
+"The server does not have ImageMagick or GD installed and/or enabled! Any of "
+"these libraries are required for WordPress to be able to resize images. "
+"Please contact your server administrator to enable this before continuing."
+msgstr ""
+
+#: ../inc/BFI_Thumb.php:235
+msgid "Image rotate failed."
+msgstr ""
+
+#: ../inc/BFI_Thumb.php:257
+msgid "Image opacity change failed."
+msgstr ""
+
+#: ../inc/BFI_Thumb.php:335
+msgid "Image color change failed."
+msgstr ""
+
+#: ../inc/BFI_Thumb.php:351
+msgid "Image grayscale failed."
+msgstr ""
+
+#: ../inc/BFI_Thumb.php:367
+msgid "Image negate failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:199
+msgid "Something went wrong."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:211
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:213
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:214
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:215
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:544
+#: ../inc/class-tgm-plugin-activation.php:2168
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1174
+msgid "Private Repository"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1177
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1182
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1185
+msgid "Required"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1185
+msgid "Recommended"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1188
+msgid "Not Installed"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1190
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1290
+#: ../inc/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1312
+#: ../inc/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1380
+msgid "Status"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1508
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1616
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1934
+msgid "Install package not available."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1935
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1936
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1937
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1938
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1939
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:1950
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2064
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2065
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2065
+#: ../inc/class-tgm-plugin-activation.php:2074
+msgid "Show Details"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2065
+#: ../inc/class-tgm-plugin-activation.php:2074
+msgid "Hide Details"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2066
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2071
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2072
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2075
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../inc/class-tgm-plugin-activation.php:2076
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/plans.php:8
+msgid "Add New Price Plan"
+msgstr ""
+
+#: ../inc/plans.php:9
+msgid "Edit Price Plan"
+msgstr ""
+
+#: ../inc/plans.php:10
+msgid "New Price Plan"
+msgstr ""
+
+#: ../inc/plans.php:11
+msgid "View Price Plan"
+msgstr ""
+
+#: ../inc/plans.php:12
+msgid "Search Price Plans"
+msgstr ""
+
+#: ../inc/plans.php:13
+msgid "No Price Plan found"
+msgstr ""
+
+#: ../inc/plans.php:14
+msgid "No Price Plans found in Trash"
+msgstr ""
+
+#: ../inc/plans.php:113
+msgid "Дни"
+msgstr ""
+
+#: ../inc/twitter-function.php:20
+msgid ""
+"Due to Twitter API changed you must insert Twitter APP. Check Our theme "
+"Options there you have Option for Twitter API, insert the Keys One Time"
+msgstr ""
+
+#: ../inc/twitter-function.php:33
+msgid ""
+"You'll need to regenerate it <a href=\"https://dev.twitter.com/apps\" target="
+"\"_blank\">here</a>!"
+msgstr ""
+
+#: ../inc/widgets/categories.php:81 ../inc/widgets/recent_posts_widget.php:204
+msgid "Title:"
+msgstr ""
+
+#: ../ReduxFramework/class-redux-plugin.php:243
+msgid "Redux Framework has an embedded demo."
+msgstr ""
+
+#: ../ReduxFramework/class-redux-plugin.php:243
+msgid "Click here to activate the sample config file."
+msgstr ""
+
+#: ../ReduxFramework/class-redux-plugin.php:350
+msgid "Deactivate Demo Mode"
+msgstr ""
+
+#: ../ReduxFramework/class-redux-plugin.php:352
+msgid "Activate Demo Mode"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:103
+#: ../ReduxFramework/ReduxCore/framework.php:109
+#: ../ReduxFramework/ReduxCore/framework.php:246
+#: ../ReduxFramework/ReduxCore/framework.php:248
+msgid "Options"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:260
+msgid "Options panel created using"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:260
+msgid "Redux Framework"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:887
+#: ../ReduxFramework/ReduxCore/framework.php:888
+#: ../ReduxFramework/ReduxCore/framework.php:1802
+msgid "Import / Export"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:898
+#: ../ReduxFramework/ReduxCore/framework.php:899
+#: ../ReduxFramework/ReduxCore/framework.php:1818
+#: ../ReduxFramework/ReduxCore/framework.php:1916
+msgid "Options Object"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:909
+#: ../ReduxFramework/ReduxCore/framework.php:910
+#: ../ReduxFramework/ReduxCore/framework.php:1832
+#: ../ReduxFramework/ReduxCore/framework.php:1936
+msgid "System Info"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1097
+#: ../ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:311
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1098
+msgid "Are you sure? Resetting will loose all custom values."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1099
+#: ../ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:313
+msgid ""
+"Your current options will be replaced with the values of this preset. Would "
+"you like to proceed?"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1371
+msgid "Default"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1664
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1718
+msgid "Expand"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1720
+#: ../ReduxFramework/ReduxCore/framework.php:1966
+msgid "Save Changes"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1722
+#: ../ReduxFramework/ReduxCore/framework.php:1968
+msgid "Reset to Defaults"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1725
+#: ../ReduxFramework/ReduxCore/framework.php:1971
+msgid "Working..."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1732
+msgid "Settings Imported!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1734
+msgid "Settings Saved!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1738
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1739
+msgid "error(s) were found!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1740
+msgid "warning(s) were found!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1869
+msgid "Import / Export Options"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1870
+msgid "Import Options"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1871
+msgid "Import from file"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1871
+msgid "Import from URL"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1876
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1886
+msgid ""
+"Input the URL to another sites options set and hit Import to load the "
+"options from that site."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1893
+msgid "Import"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1893
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1896
+msgid "Export Options"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1898
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as "
+"you can use it as a backup should anything go wrong, or you can use it to "
+"restore your settings on this site (or any other site)."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1902
+msgid "Copy"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1902
+msgid "Download"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1902
+msgid "Copy Link"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/framework.php:1925
+msgid "Show Object in Javascript Console Object"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:312
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:342
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:343
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/customizer/extension_customizer.php:344
+msgid ""
+"Your current options will be replaced with the values of this preset.  Would "
+"you like to proceed?"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/extension_edd.php:78
+#: ../ReduxFramework/ReduxCore/extensions/edd/extension_edd.php:120
+#: ../ReduxFramework/ReduxCore/extensions/edd/extension_edd.php:177
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:116
+msgid "Valid"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/extension_edd.php:171
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:110
+msgid "Not Activated"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/extension_edd.php:174
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:114
+msgid "Deactivated"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/extension_edd.php:180
+msgid "Not Valid"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/EDD_License_Handler.php:112
+#, php-format
+msgid "%1$s License Key"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/EDD_License_Handler.php:218
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:142
+msgid "Deactivate License"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/EDD_SL_Theme_Updater.php:54
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:123
+msgid "License Status"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:132
+msgid "Verify License"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/extensions/edd/edd_license/field_edd_license.php:137
+msgid "Activate License"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/tracking.php:59
+msgid "Help improve Our Panel"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/tracking.php:60
+msgid ""
+"Please helps us improve our panel by allowing us to gather anonymous usage "
+"stats so we know which configurations, plugins and themes to test with."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/tracking.php:65
+msgid "Allow tracking"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/tracking.php:70
+msgid "Do not allow tracking"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/border/field_border.php:111
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:123
+msgid "All"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/border/field_border.php:124
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:136
+msgid "Top"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/border/field_border.php:131
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:143
+msgid "Right"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/border/field_border.php:138
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:150
+msgid "Bottom"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/border/field_border.php:145
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:157
+msgid "Left"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/border/field_border.php:161
+msgid "Border style"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/color/field_color.php:72
+#: ../ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:81
+#: ../ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:91
+msgid "Transparent"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:73
+msgid "From "
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:84
+msgid "To "
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:138
+msgid "Width"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:154
+msgid "height"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:167
+#: ../ReduxFramework/ReduxCore/inc/fields/dimensions/field_dimensions.php:168
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:168
+#: ../ReduxFramework/ReduxCore/inc/fields/spacing/field_spacing.php:169
+msgid "Units"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/gallery/field_gallery.php:76
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/gallery/field_gallery.php:77
+msgid "Clear Gallery"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/group/field_group.php:71
+msgid "New"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/group/field_group.php:84
+msgid "New "
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/group/field_group.php:198
+msgid "Add"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:90
+msgid "Hover"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/link_color/field_link_color.php:96
+msgid "Active"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/media/field_media.php:116
+msgid "No media selected"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/media/field_media.php:150
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:117
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:181
+msgid "Upload"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/multi_text/field_multi_text.php:52
+msgid "Add More"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/password/field_password.php:53
+msgid "Username"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/select/field_select.php:63
+msgid "Select an item"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/select/field_select.php:83
+msgid "No items of this type were found."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:128
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:188
+msgid "Title"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:129
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:190
+msgid "Description"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:130
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:192
+msgid "URL"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:138
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:201
+msgid "Select an Option"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:159
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:221
+msgid "Delete Slide"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/slides/field_slides.php:224
+msgid "Add Slide"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:104
+msgid "Font family"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:145
+msgid "Standard Fonts"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:181
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:185
+msgid "Font style"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:185
+msgid "Style"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:211
+msgid "Font subsets"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:212
+msgid "Subsets"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:212
+msgid "Font script"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:230
+msgid "Size"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:239
+msgid "Height"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:247
+msgid "Word Spacing"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:255
+msgid "Letter Spacing"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:269
+msgid "Backup Font Family"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:289
+msgid "Font color"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/fields/typography/field_typography.php:519
+msgid "Google Webfonts"
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/color/validation_color.php:15
+#: ../ReduxFramework/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php:15
+msgid "This field must be a valid color value."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php:15
+msgid ""
+"You must provide a comma separated list of numerical values for this option."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/date/validation_date.php:15
+msgid "This field must be a valid date."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/email/validation_email.php:15
+msgid "You must provide a valid email for this option."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/no_html/validation_no_html.php:15
+msgid ""
+"You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php:15
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/numeric/validation_numeric.php:15
+msgid "You must provide a numerical value for this option."
+msgstr ""
+
+#: ../ReduxFramework/ReduxCore/inc/validation/url/validation_url.php:15
+msgid "You must provide a valid URL for this option."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:32
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:51
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:52
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:57
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:58
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:176
+#: ../ReduxFramework/sample/sample-config.php:180
+msgid "classiads Options"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:222
+msgid "Theme Information 1"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:223
+#: ../ReduxFramework/sample/sample-config.php:228
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:227
+msgid "Theme Information 2"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:232
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:283
+msgid "General Settings"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:290
+msgid "Logo"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:293
+#: ../ReduxFramework/sample/sample-config.php:1131
+#: ../ReduxFramework/sample/sample-config.php:1142
+#: ../ReduxFramework/sample/sample-config.php:1153
+#: ../ReduxFramework/sample/sample-config.php:1164
+#: ../ReduxFramework/sample/sample-config.php:1175
+#: ../ReduxFramework/sample/sample-config.php:1186
+msgid "Upload your logo."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:302
+msgid "Favicon"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:305
+msgid "Upload your favicon."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:313
+msgid "Layout"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:333
+msgid "Measurement system"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:343
+msgid "Maxim Range"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:345
+msgid "You can add the max geolocation range (default: 1000"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:351
+msgid "Regular Ads Expiry"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:378
+msgid "Post moderation"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:385
+msgid "Post moderation On every edit post"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:392
+msgid "Featured Ads on category related to category"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:399
+msgid "Author Message Box On/OFF"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:400
+msgid "Author Message box on ad detail page"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:406
+msgid "AD Locations"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:408
+msgid "Put AD locations Here With comma seperation. Example: London,New york"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:414
+msgid "Free listing tag"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:416
+msgid "Add here the text tag for free listings"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:422
+msgid "Number of tags in tag Cloud widget"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:424
+msgid "Put here a number. Example \"16\""
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:430
+msgid "Google Analytics Domain ID"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:432
+msgid ""
+"Get analytics on your site. Enter Google Analytics Domain ID (ex: "
+"UA-123456-1)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:439
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:441
+msgid "You can add text and HTML in here."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:447
+msgid "Top Bar Phone Text"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:449
+#: ../ReduxFramework/sample/sample-config.php:465
+msgid "You can add text here."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:455
+msgid "Top Bar Phone Icon Code"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:456
+#: ../ReduxFramework/sample/sample-config.php:472
+msgid ""
+"<a href=\"http://fontawesome.io/icons/\" target=\"_blank\">Click Here to get "
+"Code</a>"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:457
+msgid "<i class=\"fa fa-phone\"></i>."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:463
+msgid "Top Bar E-Mail"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:471
+msgid "Top Bar E-Mail Icon Code"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:473
+msgid "<i class=\"fa fa-envelope\"></i>."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:480
+msgid "Map Styles"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:481
+msgid ""
+"Check <a href=\"http://snazzymaps.com/\" target=\"_blank\">snazzymaps.com</"
+"a> for a list of nice google map styles."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:482
+msgid "Ad here your google map style."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:503
+msgid "Pages"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:509
+msgid "Login Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:510
+#: ../ReduxFramework/sample/sample-config.php:520
+#: ../ReduxFramework/sample/sample-config.php:530
+#: ../ReduxFramework/sample/sample-config.php:540
+#: ../ReduxFramework/sample/sample-config.php:550
+#: ../ReduxFramework/sample/sample-config.php:560
+#: ../ReduxFramework/sample/sample-config.php:570
+#: ../ReduxFramework/sample/sample-config.php:580
+#: ../ReduxFramework/sample/sample-config.php:794
+#: ../ReduxFramework/sample/sample-config.php:804
+#: ../ReduxFramework/sample/sample-config.php:814
+#: ../ReduxFramework/sample/sample-config.php:824
+#: ../ReduxFramework/sample/sample-config.php:834
+#: ../ReduxFramework/sample/sample-config.php:844
+#: ../ReduxFramework/sample/sample-config.php:854
+#: ../ReduxFramework/sample/sample-config.php:864
+#: ../ReduxFramework/sample/sample-config.php:874
+#: ../ReduxFramework/sample/sample-config.php:884
+#: ../ReduxFramework/sample/sample-config.php:894
+#: ../ReduxFramework/sample/sample-config.php:1371
+#: ../ReduxFramework/sample/sample-config.php:1381
+msgid "This must be an URL."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:519
+msgid "Profile Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:529
+msgid "Edit Profile Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:539
+msgid "Register Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:549
+msgid "Reset Password Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:559
+msgid "New Ad Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:569
+msgid "Edit Ad Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:579
+msgid "Featured Plans Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:592
+msgid "Fonts"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:598
+msgid "H1 Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:599
+#: ../ReduxFramework/sample/sample-config.php:615
+#: ../ReduxFramework/sample/sample-config.php:631
+#: ../ReduxFramework/sample/sample-config.php:647
+#: ../ReduxFramework/sample/sample-config.php:663
+#: ../ReduxFramework/sample/sample-config.php:679
+msgid "Specify the headings font properties."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:614
+msgid "H2 Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:630
+msgid "H3 Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:646
+msgid "H4 Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:662
+msgid "H5 Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:678
+msgid "H6 Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:694
+msgid "Body Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:695
+msgid "Specify the body font properties."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:709
+msgid "Anchor heading Font"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:710
+msgid "Specify the Anchor heading font properties."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:728
+msgid "Colors"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:734
+msgid "Primary Color"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:735
+msgid "Pick a Primary Color (default: #444)."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:744
+msgid "Link Color"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:745
+msgid "Pick a color for link (default: #666)."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:754
+msgid "Hover/Active Link State Color"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:755
+msgid "Pick a color for hover/active link state (default: #e96969)."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:764
+msgid "Buttons Color"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:765
+msgid "Pick a color for buttons (default: #444)."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:774
+msgid "Buttons Hover State Color"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:775
+msgid "Pick a color for buttons hover state (default: #e96969)."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:787
+msgid "Social Links"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:793
+msgid "Facebook Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:803
+msgid "Twitter Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:813
+msgid "Dribbble Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:823
+msgid "Flickr Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:833
+msgid "Github Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:843
+msgid "Pinterest Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:853
+msgid "Youtube Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:863
+msgid "Google+ Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:873
+msgid "LinkedIn Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:883
+msgid "Tumblr Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:893
+msgid "Vimeo Page URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:905
+msgid "Home Page Ads"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:912
+msgid "Home Page Ad 1"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:915
+#: ../ReduxFramework/sample/sample-config.php:967
+#: ../ReduxFramework/sample/sample-config.php:1028
+msgid "Upload your Ad Image."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:922
+msgid "Home Page Ad 1 link URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:924
+#: ../ReduxFramework/sample/sample-config.php:976
+#: ../ReduxFramework/sample/sample-config.php:1037
+msgid "You can add URL."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:931
+msgid "data-ad-client for Google ads (HOME PAGE AD 1)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:933
+#: ../ReduxFramework/sample/sample-config.php:985
+#: ../ReduxFramework/sample/sample-config.php:1046
+msgid "Put here data-ad-client id Example: ca-pub-1989849072509270."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:939
+msgid "data-ad-slot for Google ads (HOME PAGE AD 1)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:941
+#: ../ReduxFramework/sample/sample-config.php:993
+#: ../ReduxFramework/sample/sample-config.php:1054
+msgid "Put here data-ad-slot id Example: 1617159162."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:947
+msgid "Ad width for Google ads (HOME PAGE AD 1)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:948
+#: ../ReduxFramework/sample/sample-config.php:1000
+#: ../ReduxFramework/sample/sample-config.php:1061
+msgid "Ad width according to your ad code which got from google"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:949
+#: ../ReduxFramework/sample/sample-config.php:1001
+#: ../ReduxFramework/sample/sample-config.php:1062
+msgid "Put here ad width Example: 468, do not use px or any other word."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:955
+msgid "Ad height for Google ads (HOME PAGE AD 1)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:956
+#: ../ReduxFramework/sample/sample-config.php:1008
+#: ../ReduxFramework/sample/sample-config.php:1069
+msgid "Ad height according to your ad code which got from google"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:957
+#: ../ReduxFramework/sample/sample-config.php:1009
+#: ../ReduxFramework/sample/sample-config.php:1070
+msgid "Put here ad height Example: 60, do not use px or any other word."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:964
+msgid "Home Page Ad 2"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:974
+msgid "Home Page Ad 2 link URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:983
+msgid "data-ad-client for Google ads (HOME PAGE AD 2)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:991
+msgid "data-ad-slot for Google ads (HOME PAGE AD 2)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:999
+msgid "Ad width for Google ads (HOME PAGE AD 2)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1007
+msgid "Ad height for Google ads (HOME PAGE AD 2)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1018
+msgid "Other Ads"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1025
+msgid " Location & category page Ad"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1035
+msgid "Location & category page Ad link URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1044
+msgid "data-ad-client for Google ads (Location & category page)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1052
+msgid "data-ad-slot for Google ads (Location & category page)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1060
+msgid "Ad width for Google ads (Location & category page)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1068
+msgid "Ad height for Google ads (Location & category page)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1080
+msgid "Callout Message For Home page"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1086
+msgid " Callout Title"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1087
+msgid "Put here your Callout title"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1094
+msgid " Callout Description"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1095
+msgid "Put here your Callout Description"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1102
+msgid " Callout Button Text"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1103
+msgid "Put here your Callout Button Text"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1110
+msgid " Callout Button URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1111
+msgid "Put here your Callout Button URL"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1122
+msgid "Partners"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1128
+msgid "Partner One"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1139
+msgid "Partner two"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1150
+msgid "Partner three"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1161
+msgid "Partner four"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1172
+msgid "Partner five"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1183
+msgid "Partner six"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1198
+msgid "Twitter Api"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1204
+msgid "Consumer Key"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1213
+msgid "Consumer Secret"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1222
+msgid "User Access Token"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1231
+msgid "User Access Token Secret"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1245
+msgid "Contact Page"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1251
+msgid "Your email address"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1252
+msgid "This must be an email address."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1261
+msgid "Email error message"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1270
+msgid "Name error message"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1279
+msgid "Message error"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1288
+msgid "Thank you message"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1315
+msgid "Zoom level"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1327
+msgid "Paypal Settings"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1333
+msgid "PayPal environment"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1343
+msgid "API Username (required)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1352
+msgid "API Password (required)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1361
+msgid "API Signature (required)"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1370
+msgid "Thank you page - after successful payment"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1380
+msgid "Thank you page - after failed payment"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1390
+msgid "Currency"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1391
+msgid "Select your currency."
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1423
+msgid "<strong>Theme URL:</strong> "
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1424
+msgid "<strong>Author:</strong> "
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1425
+msgid "<strong>Version:</strong> "
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1428
+msgid "<strong>Tags:</strong> "
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1435
+#: ../ReduxFramework/sample/sample-config.php:1466
+msgid "Documentation"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1450
+msgid "Theme Information"
+msgstr ""
+
+#: ../ReduxFramework/sample/sample-config.php:1451
+msgid ""
+"<p class=\"description\">This is the Description. Again HTML is allowed</p>"
+msgstr ""
